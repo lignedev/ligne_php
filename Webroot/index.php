@@ -7,7 +7,7 @@ require(ROOT . 'Config/core.php');
 require(ROOT . 'router.php');
 require(ROOT . 'request.php');
 require(ROOT . 'dispatcher.php');
-require(ROOT . 'Assets.php');
+require(ROOT . 'Core/Assets.php');
 
 $dispatch = new Dispatcher();
 $dispatch->dispatch();

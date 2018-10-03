@@ -1,7 +1,8 @@
 <?php
 /**
  * Todos los controladores creados deben heredar
- * De este controlador para el funcionamiento de los mismos
+ * de este controlador para el funcionamiento de los mismos ya que
+ * contiene el asignamiento de los datos y el renderizado de la pantilla y vistas
  **/
 class Controller
 {

@@ -13,6 +13,9 @@
             padding: 3rem 1.5rem;
             text-align: center;
         }
+        .margin-med{
+            margin: 6px 0;
+        }
     </style>
 </head>
 
@@ -26,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/ligne_php/tasks/index/">Home <span class="sr-only">(current)</span></a>
             </li>
         </ul>
     </div>

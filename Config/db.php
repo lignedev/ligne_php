@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Esto es un singleton para la conexion a la base de datos utilizando PDO
+**/
 class Database
 {
     private static $bdd = null;
@@ -43,7 +45,6 @@ class Database
             return self::$bdd;
         }
         catch (PDOException $e) {
-            # Escribir posibles excepciones en el error_log
             error_log($e->getMessage(),0);
         }
     }

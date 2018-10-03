@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * El despachador está haciendo el mismo trabajo que un controlador de tránsito aéreo.
+ * Cuando se carga una nueva solicitud, selecciona el controlador y la
+ * acción con parámetros. Entonces, con un solo método (dispatch ()),podemos
+ * iniciar toda esta lógica de enrutamiento.
+ *
+ *  http://host/controller/action/[parameter]
+ *
+**/
 class Dispatcher
 {
 

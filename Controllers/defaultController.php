@@ -8,8 +8,7 @@
 
 /**
  * Esta clase es practicamente para ejemplos, se recomienda dejarla intacta
- * generalmente se utiliza para asegurarse que el framework esta funcionando
- * correctamente
+ * generalmente se utiliza para asegurarse que el framework esta funcionando correctamente
 **/
 class defaultController extends Controller
 {

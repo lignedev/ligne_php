@@ -1,7 +1,7 @@
 <?php
 /**
  * Controlar cuando no exista un controlador
- * acceso ejemplo: http://localhost/ligne_php/tasks/create
+ * acceso ejemplo: http://localhost/ligne_php/tasks/index
  * donde create es el metodo al que se accede
 **/
 
@@ -15,6 +15,16 @@ class tasksController extends Controller
         $data['tasks'] = $tasks->showAllTasks();
         $this->set($data); //envia datos a la vista
         $this->render("index"); //Renderiza la vista
+    }
+
+    function completetasks()
+    {
+        require(ROOT . 'Models/Task.php');
+
+        $tasks = new Task();
+        $data['tasks'] = $tasks->showCompleteTasks();
+        $this->set($data); //envia datos a la vista
+        $this->render("completetasks"); //Renderiza la vista
     }
 
     function create()
@@ -58,6 +68,17 @@ class tasksController extends Controller
 
         $task = new Task();
         if ($task->delete($id))
+        {
+            header("Location: " . WEBROOT . "tasks/index");
+        }
+    }
+
+    function success($id)
+    {
+        require(ROOT . 'Models/Task.php');
+
+        $task = new Task();
+        if ($task->success($id))
         {
             header("Location: " . WEBROOT . "tasks/index");
         }

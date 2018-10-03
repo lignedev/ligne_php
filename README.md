@@ -17,6 +17,8 @@ Vista rapida de una **url** con el framework
 
 ## App Demo
 
+URL: http://localhost/ligne_php/tasks/index
+
 Una sencilla app de tareas personales las cuales se pueden
 crear, modificar y eliminar, como extra se puede indicar cuales 
 de estas ya estan completas.
@@ -24,6 +26,9 @@ de estas ya estan completas.
 ![Main](https://i.imgur.com/f3Q69fX.png)
 
 ## Index (Dev stuff)
+
+URL: http://localhost/ligne_php/
+
 ![](https://i.imgur.com/xJ3IzVv.png)
 
 

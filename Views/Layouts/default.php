@@ -1,10 +1,8 @@
 <!doctype html>
 <head>
     <meta charset="utf-8">
-    <title>Ligne Framework</title>
-
+    <title><?= $page_title ?></title>
     <link href="<?= Assets::setAssets('css/bootstrap.min.css') ?>" rel="stylesheet">
-
     <style>
         body {
             padding-top: 5rem;
@@ -18,7 +16,6 @@
         }
     </style>
 </head>
-
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Ligne PHP</a>
@@ -41,14 +38,13 @@
 
         <?=
         /**
-         * Aqui se renderizan todas las vistas con el mismo layout
+         * Aqui se renderizan todas las vistas
         **/
         $content_for_layout;
         ?>
 
     </div>
 </main>
-
 <script src="<?= Assets::setAssets('js/bootstrap.min.js') ?>"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
         <a href="/ligne_php/tasks/index/" class="btn btn-primary btn-xs">
             All Task's
         </a>
+        <button class="btn">#&Tab;<?php echo $cantidad_tareas['total_tasks'] ?></button>
     </div>
     <table class="table table-striped custab">
         <thead>

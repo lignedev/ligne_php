@@ -7,7 +7,7 @@
  *                  ^        ^
  *            1ro verifica   2da verifica
  *
- * Hasta que la primera condicion no se de este no continua, siendo esta una manera
+ * Hasta que la primera condicion de este no se da, no continua, siendo esta una manera
  * se asegurarse de que el controlador este correcrto para poder verificar
  * que el metodo sea parte de ese controlador.
  *
@@ -74,17 +74,18 @@ class Router
      * Muestra una pantalla cuando en la ruta se ha insertado un
      * controller que no existe
      */
-    static public function show_nonexistent_controller(){
-        echo "<h1>El controlador no existe</h1><h3>Debe verificar la ruta que ha insertado</h3>";
-        die();
+    static public function show_nonexistent_controller($controller_name = null){
+        __show_dev_messages__("El controlador no existe",
+            "Debe verificar la ruta que ha insertado, en realidad tiene un controlador con el nombre <span class='special_name_element'>$controller_name</span>",$_SERVER['REQUEST_URI']);
     }
 
     /**
      * Muestra al usuario que la accion requerida esta vacia, no existe o es incorrecta
      */
     static public function show_invalid_action(){
-        echo "<h1>Accion inexistente para la url</h1>" . "<h3>" . $_SERVER['REQUEST_URI'] . "</h3>";
-        die();
+        __show_dev_messages__("Acción  inexistente para la url",
+            "Puede que este intentado realizar una acción que no exista, por ejemplo, para un controlador foo que tenga una acción bar la ruta seria http://dominio/foo/bar",
+            $_SERVER['REQUEST_URI']);
     }
 
     /**
@@ -92,7 +93,7 @@ class Router
      * @param $method String
      */
     static public function show_action_no_exists($method){
-        echo "El metodo <strong>" . $method . "</strong> no existe. Verifica tu clase.";
-        die();
+        __show_dev_messages__("La acción ' " . $method . " ' no existe",
+            "La acción solicitada al parecer no existe en el controlador");
     }
 }

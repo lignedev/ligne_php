@@ -23,7 +23,6 @@ class Dispatcher
             call_user_func_array([$controller, $this->request->action], $this->request->params);
         }else{
             Router::show_action_no_exists($this->request->action);
-            die();
         }
 
     }
@@ -42,7 +41,7 @@ class Dispatcher
             return $controller;
         }
         else
-            Router::show_nonexistent_controller();
+            Router::show_nonexistent_controller($this->request->controller);
     }
 
     /**

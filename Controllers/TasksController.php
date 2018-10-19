@@ -4,83 +4,74 @@
  * acceso ejemplo: http://localhost/ligne_php/tasks/index
  * donde create es el metodo al que se accede
 **/
+//Model
+require(ROOT . 'Models/Tasks/Task.php');
 
-class tasksController extends Controller
+class TasksController extends Controller
 {
     function index()
     {
-        require(ROOT . 'Models/Task.php');
-
         $tasks = new Task();
         $data['tasks'] = $tasks->showAllTasks();
-        $this->set($data); //envia datos a la vista
-        $this->render("index"); //Renderiza la vista
+        $data['cantidad_tareas'] = $tasks->tasks_number_by_status(0);
+        $this->setData($data); //envia datos a la vista
+        $this->render("index",'Index Page'); //Renderiza la vista con un titulo
     }
 
     function completetasks()
     {
-        require(ROOT . 'Models/Task.php');
-
         $tasks = new Task();
         $data['tasks'] = $tasks->showCompleteTasks();
-        $this->set($data); //envia datos a la vista
-        $this->render("completetasks"); //Renderiza la vista
+        $data['cantidad_tareas'] = $tasks->tasks_number_by_status(1);
+        $this->setData($data); //envia datos a la vista
+        $this->render("completetasks",'Complete Tasks'); //Renderiza la vista
     }
 
     function create()
     {
         if (isset($_POST["title"]))
         {
-            require(ROOT . 'Models/Task.php');
-
             $task= new Task();
 
             if ($task->create($_POST["title"], $_POST["description"]))
             {
-                header("Location: " . WEBROOT . "tasks/index");
+                $this->redirect(array('controller'=>'tasks','action'=>'index'));
             }
         }
-
-        $this->render("create");
+        $this->render("create",'Create a Task');
     }
 
     function edit($id)
     {
-        require(ROOT . 'Models/Task.php');
         $task= new Task();
 
         $data["task"] = $task->showTask($id);
-
         if (isset($_POST["title"]))
         {
             if ($task->edit($id, $_POST["title"], $_POST["description"]))
             {
-                header("Location: " . WEBROOT . "tasks/index");
+                $this->redirect(array('controller'=>'tasks','action'=>'index'));
             }
         }
-        $this->set($data);
-        $this->render("edit");
+        $this->setData($data);
+        $this->render("edit",'Edit Task '. $id);
     }
 
     function delete($id)
     {
-        require(ROOT . 'Models/Task.php');
-
         $task = new Task();
         if ($task->delete($id))
         {
-            header("Location: " . WEBROOT . "tasks/index");
+            $this->redirect(array('controller'=>'tasks','action'=>'index'));
         }
     }
 
     function success($id)
     {
-        require(ROOT . 'Models/Task.php');
-
         $task = new Task();
         if ($task->success($id))
         {
-            header("Location: " . WEBROOT . "tasks/index");
+            $this->redirect(array('controller'=>'tasks','action'=>'index'));
         }
     }
 }

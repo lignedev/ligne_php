@@ -22,10 +22,9 @@ class Assets
      */
     static public function setAssets($asset,$cache = true)
     {
-        $protocol = 'http';
         $domain = $_SERVER['SERVER_NAME'];
         $assets_dir = 'webassets';
-        return $protocol . '://' . $domain . '/' . self::root_dir() . '/' . $assets_dir . '/' . $asset . self::cache($cache);
+        return PROTOCOL . '://' . $domain . '/' . self::root_dir() . '/' . $assets_dir . '/' . $asset . self::cache($cache);
     }
 
     /**

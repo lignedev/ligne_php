@@ -1,10 +1,10 @@
 <h1>Complete Tasks</h1>
 <div class="row col-md-12 centered">
     <div class="margin-med">
-        <a href="/ligne_php/tasks/create/" class="btn btn-primary btn-xs pull-right">
+        <a href="<?= Assets::href("tasks/create")?>" class="btn btn-primary btn-xs pull-right">
             <strong>+</strong>&Tab;New task
         </a>
-        <a href="/ligne_php/tasks/index/" class="btn btn-primary btn-xs">
+        <a href="<?= Assets::href("tasks/index")?>" class="btn btn-primary btn-xs">
             All Task's
         </a>
         <button class="btn">#&Tab;<?php echo $cantidad_tareas['total_tasks'] ?></button>

@@ -7,7 +7,7 @@
  *  Albert Eduardo Hidalgo Taveras
  * https://github.com/itsalb3rt/diferencia_tiempo_php
  **/
-namespace TimeDifference;
+namespace Core\Util\time;
 
 class TimeDiff{
     /**

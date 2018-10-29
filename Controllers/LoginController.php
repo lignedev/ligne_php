@@ -1,21 +1,19 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Usuario
+ * User: Albert Eduardo Hidalgo Taveras
  * Date: 14/10/2018
  * Time: 12:57 PM
  */
 
-use FormBuilder\PhpFormBuilder;
-
+use Core\Util\form_builder\PhpFormBuilder;
 
 class LoginController extends Controller
 {
-    public function loginCheck(){
-
+    public function login(){
         $login_form = new PhpFormBuilder();
         //Atributos del formulario
-        $login_form->set_att('action', '/loginCheck');
+        $login_form->set_att('action', Assets::href('login/loginCheck'));
         $login_form->set_att('method', 'post');
         $login_form->set_att('enctype', 'multipart / form-data');
 
@@ -46,5 +44,9 @@ class LoginController extends Controller
         $this->setData($data);
         //Renderizando vista
         $this->render('login','login');
+    }
+
+    public function logincheck(){
+        var_dump($_POST);
     }
 }

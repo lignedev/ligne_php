@@ -2,7 +2,7 @@
 
 // v 0.8.6
 
-namespace FormBuilder;
+namespace Core\Util\form_builder;
 
 class PhpFormBuilder {
 

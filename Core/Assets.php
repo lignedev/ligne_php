@@ -53,4 +53,28 @@ class Assets
             return '?' . time();
         }
     }
+
+    /**
+     * Retorna una URL valida dentro del proyecto donde no es necesario
+     * especificar la carpeta root explicitamente
+     *
+     * eje: <a href=" <?= Assets::href("tasks/index")?> ">
+     *                                   ^      ^
+     *                             controlador  ^
+     *                                          accion
+     *
+     * @param $url
+     * @param null | mixed $param
+     *
+     * @return string
+     */
+    static public function href($url, $param = null){
+        $new_url = explode('/',$url);
+        $root_dir = explode('/',$_SERVER['REQUEST_URI']);
+        if(count($new_url) > 1){
+            return '/' . $root_dir[1] . '/' . trim($new_url[0]) . '/' . trim($new_url[1]) . '/' . trim($param) ;
+        }else{
+            return '/' . $root_dir[1] . '/' . 'novalid/url';
+        }
+    }
 }

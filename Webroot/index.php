@@ -36,12 +36,22 @@ function __show_dev_messages__($header,$description,$route = null){
 }
 
 //algunos archivos
-require(ROOT . 'Core/System/Core/core.php');
 
-require(ROOT . 'router.php');
-require(ROOT . 'request.php');
-require(ROOT . 'dispatcher.php');
-require(ROOT . 'Core/Assets.php');
+/**
+ * Carga todas las clases que se utilicen con la
+ * palabra clase use, esto es gracias al namespace
+**/
+require_once(ROOT . 'Core/System/Core/autoload.php');
+/**
+ * El el nucleo centrar el framework, carga clases escenciales
+ * para el funcionamiento
+**/
+require_once(ROOT . 'Core/System/Core/core.php');
+
+require_once(ROOT . 'router.php');
+require_once(ROOT . 'request.php');
+require_once(ROOT . 'dispatcher.php');
+require_once(ROOT . 'Core/Assets.php');
 
 $dispatch = new Dispatcher();
 $dispatch->dispatch();

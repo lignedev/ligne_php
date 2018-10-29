@@ -4,8 +4,8 @@
  * acceso ejemplo: http://localhost/ligne_php/tasks/index
  * donde create es el metodo al que se accede
 **/
-//Model
-require(ROOT . 'Models/Tasks/Task.php');
+
+include (ROOT . 'Models/Tasks/Task.php');
 
 class TasksController extends Controller
 {

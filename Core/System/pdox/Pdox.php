@@ -9,6 +9,10 @@
  * @license  The MIT License (MIT) - <http://opensource.org/licenses/MIT>
  */
 
+namespace Core\System\pdox;
+
+use PDO;
+
 class Pdox
 {
     public $pdo = null;

@@ -4,7 +4,11 @@
  * la clase Database, esto con el objetivo de mantener
  * una estructura solida y poco confusa
  **/
-class Model extends Database
+namespace Core;
+
+use Core\System\DataBase;
+
+class Model extends DataBase
 {
 
 }

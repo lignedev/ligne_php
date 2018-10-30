@@ -6,6 +6,4 @@
  * Modelo
  * Controlador
  **/
-require(ROOT . "Core/System/DataBase.php");
-require(ROOT . "Core/Model.php");
 require(ROOT . "Core/Controller.php");

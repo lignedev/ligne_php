@@ -5,7 +5,7 @@
  * donde create es el metodo al que se accede
 **/
 
-include (ROOT . 'Models/Tasks/Task.php');
+use Models\Tasks\Task;
 
 class TasksController extends Controller
 {

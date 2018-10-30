@@ -2,9 +2,11 @@
 /**
  * Esto es un singleton para la conexion a la base de datos utilizando PDO
  **/
+namespace Core\System;
 
+use Core\System\pdox\Pdox;
 
-class Database
+class DataBase
 {
     private $bdd = null;
     private $credentials;

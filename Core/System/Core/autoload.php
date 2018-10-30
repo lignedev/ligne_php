@@ -4,12 +4,6 @@
  * User: Albert Eduardo Hidalgo Taveras
  * Date: 26/10/2018
  * Time: 11:31 PM
- *
- * El auto load tiene un problema, no puede cargar clases que extiendan
- * ya que esto implica que php cargue las clases bases de estos y ahi se
- * pierde la clase principal que se intento cargar.
- *
- * Esto se limita a cargar clases utilitarios
  */
 
 spl_autoload_register('_autoload');

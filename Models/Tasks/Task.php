@@ -1,5 +1,8 @@
 <?php
 
+namespace Models\Tasks;
+
+use Core\Model;
 
 class Task extends Model
 {
@@ -57,8 +60,6 @@ class Task extends Model
             ->getAll();
         return $req;
     }
-
-
 
     public function edit($id, $title, $description)
     {

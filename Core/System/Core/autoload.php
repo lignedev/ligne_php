@@ -4,12 +4,16 @@
  * User: Albert Eduardo Hidalgo Taveras
  * Date: 26/10/2018
  * Time: 11:31 PM
+ *
+ * Auto cargador de clases, esta funcion utiliza
+ * el namespace de las clases para buscarlas en el directorio
+ * en el que esten, tener pendiente que si el namespace esta mal,
+ * no se localizara la clase
  */
 
 spl_autoload_register('_autoload');
-/**
- * Constante para evitar slash invertidos
- **/
+
+// Constante para reemplazar el slash invertido del namespace
 define('DS','/');
 
 function _autoload( $class ) {

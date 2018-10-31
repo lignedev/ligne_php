@@ -60,6 +60,7 @@
             }
         }
 
+
         /* smartphones, Android phones, landscape iPhone */
         @media (min-width: 480px) {
             h1 {
@@ -246,6 +247,9 @@
         ul li {
             margin: 8px auto;
         }
+        .debug_backtrace div{
+            margin: 10px;
+        }
         @media only screen and (min-width: 48em) {
             .container {
                 width: 49rem;
@@ -261,7 +265,6 @@
                         width: 76rem;
                     }
 
-
     </style>
 </head>
 <bory>
@@ -270,7 +273,7 @@
         <div class="header"></div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="panel header">
             <div class=" body header_text">
                 <?= $header ?>
@@ -286,6 +289,19 @@
                             <?= $route; ?>
                         </div>
                     <?php endif; ?>
+                </div>
+                <br>
+                <div class="code debug_backtrace">
+                    <?php
+                    $e = new \Exception;
+                    $data = explode('#',$e);
+                    $route = str_replace(DS ,'\\',ROOT);
+                    foreach($data as $key => $val){
+                        if($key > 0 ){
+                            echo '<div>'. str_replace($route,'',$data[$key]) . '</div>';
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>

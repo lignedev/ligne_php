@@ -112,7 +112,7 @@ class Controller
      * @param $filename
      */
     private function view_nonexists($filename){
-        __show_dev_messages__("Error de vista",
+        __show_dev_messages__("Error archivo vista",
             "La vista <span class='special_name_element'>' $filename '</span> no fue encontrada");
     }
     /**

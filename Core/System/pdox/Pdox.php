@@ -49,7 +49,7 @@ class Pdox
         $config['port'] = (strstr($config['host'], ':') ? explode(':', $config['host'])[1] : '');
         $this->prefix = (isset($config['prefix']) ? $config['prefix'] : '');
         $this->cacheDir = (isset($config['cachedir']) ? $config['cachedir'] : __DIR__ . '/cache/');
-        $this->debug = (isset($config['debug']) ? $config['debug'] : true);
+        $this->debug = (isset($config['debug']) ? $config['debug'] : ENVIROMENT);
 
         $dsn = '';
 
@@ -505,12 +505,12 @@ class Pdox
 
     public function error()
     {
-        $msg = '<h1>Database Error</h1>';
-        $msg .= '<h4>Query: <em style="font-weight:normal;">"' . $this->query . '"</em></h4>';
+        $msg = '<h4>Query: <em style="font-weight:normal;">"' . $this->query . '"</em></h4>';
         $msg .= '<h4>Error: <em style="font-weight:normal;">' . $this->error . '</em></h4>';
 
-        if ($this->debug === true) {
-            die($msg);
+        if ($this->debug === 'dev') {
+            __show_dev_messages__('SQL Error',$msg);
+            die();
         }
 
         throw new PDOException($this->error . '. (' . $this->query . ')');

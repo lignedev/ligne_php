@@ -4,7 +4,7 @@
 
 ## Arquitectura Global
 
-![](https://i.imgur.com/TSiq5s4.png)
+![](https://i.imgur.com/oSwamcg.png)
 
 Al acceder a nuestro sitio web, el usuario será redireccionado
 automáticamente a Webroot / index.php gracias a dos archivos de

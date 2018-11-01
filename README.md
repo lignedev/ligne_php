@@ -7,7 +7,7 @@ https://itsalb3rt.github.io/ligne_php_framework_documentacion/Introduccion.htm
 
 ## 🏢Arquitectura Global
 
-![](https://i.imgur.com/TSiq5s4.png)
+![](https://i.imgur.com/oSwamcg.png)
 
 Al acceder a nuestro sitio web, el usuario será redireccionado
 automáticamente a Webroot / index.php gracias a dos archivos de

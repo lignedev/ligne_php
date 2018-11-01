@@ -1,8 +1,11 @@
 # Ligne Framework
 
 ---
+## 📚Documentación
 
-## Arquitectura Global
+https://itsalb3rt.github.io/ligne_php_framework_documentacion/Introduccion.htm
+
+## 🏢Arquitectura Global
 
 ![](https://i.imgur.com/TSiq5s4.png)
 
@@ -14,8 +17,9 @@ acceso htaccess.
 Vista rapida de una **url** con el framework
 
 ![enter image description here](https://i.imgur.com/kHEWAwK.png)
-
-## App Demo
+---
+## Si estás viendo esto es que estas en la versión de desarrollo por lo que esta rama no tiene la app demo.
+## 🚀App Demo
 
 URL: http://localhost/ligne_php/tasks/index
 
@@ -26,7 +30,7 @@ de estas ya estan completas.
 ![Main](https://i.imgur.com/f3Q69fX.png)
 
 ## Index (Dev stuff)
-La APP demo esta en la rama MASTER por el momento https://gitlab.com/itsalb3rt/ligne_php_framework/tree/master
+La APP demo está en la rama MASTER por el momento https://gitlab.com/itsalb3rt/ligne_php_framework/tree/master
 
 Debes crear la base de datos junto a su tabla, el siguiente script lo hace por ti;
 

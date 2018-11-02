@@ -18,7 +18,7 @@
 class Router
 {
     static public function parse($url, $request){
-        $url = trim($url);
+        $url = strtok(trim($url),'?');
         $explode_url = explode('/', $url);
         $explode_url = array_slice($explode_url, 2);
         if ($url == '/' . self::root_dir() . '/' )

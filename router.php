@@ -17,14 +17,11 @@
  **/
 class Router
 {
-    private static $main_project_name = "/ligne_php/";//Reemplaza el contenido con el nombre de tu carpeta root
-
     static public function parse($url, $request){
         $url = trim($url);
         $explode_url = explode('/', $url);
         $explode_url = array_slice($explode_url, 2);
-
-        if ($url == self::$main_project_name )
+        if ($url == '/' . self::root_dir() . '/' )
             self::load_index($request);
         elseif(self::is_array_url_valid($explode_url))
             self::route_construct($request,$explode_url);
@@ -69,6 +66,18 @@ class Router
             return true;
         else
             return false;
+    }
+    /**
+     * Retorna el nombre de la carpeta base del proyecto
+     * esto es relativo ya que la carpeta donde esta el framework podria
+     * llamarse de cualquier manera y con esto se obtiene este nombre
+     *
+     * @return string
+     */
+    static private function root_dir(){
+        $root_dir = $_SERVER['REQUEST_URI'];
+        $root_dir = explode('/',$root_dir);
+        return $root_dir[1];
     }
     /**
      * Muestra una pantalla cuando en la ruta se ha insertado un

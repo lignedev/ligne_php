@@ -26,7 +26,7 @@ class Router
         elseif(self::is_array_url_valid($explode_url))
             self::route_construct($request,$explode_url);
         else
-            self::show_nonexistent_controller();
+            self::show_nonexistent_controller($explode_url[0]);
     }
 
     /**

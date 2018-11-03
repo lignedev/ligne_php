@@ -10,6 +10,7 @@
  * Esta clase es practicamente para ejemplos, se recomienda dejarla intacta
  * generalmente se utiliza para asegurarse que el framework esta funcionando correctamente
 **/
+
 class DefaultController extends Controller
 {
     /**
@@ -18,10 +19,12 @@ class DefaultController extends Controller
     public function index()
     {
         $data['framework_name'] = "Ligne Framework";
-        $data['version'] = "v1.2";
+        $data['version'] = "v1.3";
         $data['environment'] = "Dev";
         $data['date'] = "Oct 2018";
+        $data['external_components_included'] = "HttpFoundation";
+        $data['autor'] = "Albert Eduardo Hidalgo Taveras";
         $this->setData($data); //envia datos a la vista
-        $this->render("index",'Default data'); //Renderiza la vista
+        $this->render("index",'Welcome!'); //Renderiza la vista
     }
 }

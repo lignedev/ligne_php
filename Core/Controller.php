@@ -4,6 +4,8 @@
  * de este controlador para el funcionamiento de los mismos ya que
  * contiene el asignamiento de los datos y el renderizado de la pantilla y vistas
  **/
+use Core\Util\HttpFoundation\Request;
+
 class Controller
 {
     /**
@@ -69,6 +71,24 @@ class Controller
         }else {
             $this->fail_on_load_default_layout();
         }
+    }
+
+    /**
+     * Retorna todas las peticiones http en una capa orientada a objeto
+     * Esto reemplaza las variables $_GET, $_POST y otras variables globales
+     * Esto gracias a HttpFoundation.
+     *
+     * @return Request
+     */
+    public function easy_request(){
+        return new Request(
+            $_GET,
+            $_POST,
+            array(),
+            $_COOKIE,
+            $_FILES,
+            $_SERVER
+        );
     }
 
     /**

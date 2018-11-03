@@ -2,6 +2,7 @@
 /**
  * El objetivo de este archivo es obtener la URL solicitada por el usuario.
  */
+
 class Request
 {
     public $url;

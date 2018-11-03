@@ -1,6 +1,33 @@
-<h1>Default index de <?= $framework_name ?></h1>
+<style>
+    li{
+        list-style-position: inside;
+    }
+    hr{
+        border-color: grey;
+        opacity: 0.3;
+        width: 50%;
+    }
+</style>
+<h1>Default index <?= $framework_name ?></h1>
 <div>
-    <h2><?= $version ?></h2>
-    <h4><?= $environment ?></h4>
-    <h5><?= $date ?></h5>
+    <div>
+        <h2>Version: <?= $version ?></h2>
+    </div>
+    <hr>
+    <div>
+        <h4>Environment: <?= $environment ?></h4>
+    </div>
+    <div>
+        <h5>Date: <?= $date ?></h5>
+    </div>
+    <div>
+        <h5>External components included:</h5>
+        <ul>
+            <li><?= $external_components_included ?></li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <i>Autor: <?= $autor ?></i>
+    </div>
 </div>

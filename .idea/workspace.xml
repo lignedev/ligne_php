@@ -2,92 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c30ad5-e240-41b9-86e1-5ed7797d0a0d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/AcceptHeader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/AcceptHeaderItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/ApacheRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/BinaryFileResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Cookie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Exception/ConflictingHeadersException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Exception/RequestExceptionInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Exception/SuspiciousOperationException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/ExpressionRequestMatcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/AccessDeniedException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/CannotWriteFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/ExtensionFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/FileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/FileNotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/FormSizeFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/IniSizeFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/NoFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/NoTmpDirFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/PartialFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/UnexpectedTypeException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Exception/UploadException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/File.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/MimeType/ExtensionGuesser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/MimeType/ExtensionGuesserInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/MimeType/FileBinaryMimeTypeGuesser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/MimeType/FileinfoMimeTypeGuesser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/MimeType/MimeTypeExtensionGuesser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/MimeType/MimeTypeGuesser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/MimeType/MimeTypeGuesserInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/Stream.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/File/UploadedFile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/FileBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/HeaderBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/HeaderUtils.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/IpUtils.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/JsonResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/ParameterBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/RedirectResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Request.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/RequestMatcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/RequestMatcherInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/RequestStack.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/ResponseHeaderBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/ServerBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Attribute/AttributeBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Attribute/AttributeBagInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Attribute/NamespacedAttributeBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Flash/AutoExpireFlashBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Flash/FlashBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Flash/FlashBagInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/SessionBagInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/SessionBagProxy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/SessionInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/SessionUtils.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Handler/AbstractSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Handler/MemcachedSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Handler/MigratingSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Handler/MongoDbSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Handler/NativeFileSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Handler/NullSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Handler/PdoSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Handler/RedisSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Handler/StrictSessionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/MetadataBag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/MockArraySessionStorage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/MockFileSessionStorage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/NativeSessionStorage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/PhpBridgeSessionStorage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Proxy/AbstractProxy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/Proxy/SessionHandlerProxy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Session/Storage/SessionStorageInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/StreamedResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/phpunit.xml.dist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Default/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Default/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/request.php" beforeDir="false" afterPath="$PROJECT_DIR$/request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Util/HttpFoundation/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Util/HttpFoundation/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/router.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,7 +29,17 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="router.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/router.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -124,7 +51,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$HORAS_LABORALES</find>
       <find>HORA_INICIO_LABORAL</find>
       <find>$HORA_INICIO_LABORAL</find>
       <find>HORA_FINAL_LABORAL</find>
@@ -154,6 +80,7 @@
       <find>controller</find>
       <find>AcceptHeader</find>
       <find>Symfony\Component\</find>
+      <find>HTTP_USER_AGENT</find>
     </findStrings>
     <replaceStrings>
       <replace>Core\Util</replace>
@@ -161,8 +88,8 @@
     </replaceStrings>
     <dirStrings>
       <dir>C:\wamp64\www\ligne_php</dir>
-      <dir>C:\wamp64\www\ligne_php_pro\Core\Util\HttpFoundation</dir>
       <dir>C:\wamp64\www\ligne_php_pro\Core\Util\HttpFoundation\Tests</dir>
+      <dir>C:\wamp64\www\ligne_php_pro\Core\Util\HttpFoundation</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -171,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Controllers/tasksController.php" />
         <option value="$PROJECT_DIR$/Controllers/homeController.php" />
         <option value="$PROJECT_DIR$/Controllers/defaultController.php" />
         <option value="$PROJECT_DIR$/Views/Layouts/nuevo.php" />
@@ -211,7 +137,6 @@
         <option value="$PROJECT_DIR$/Core/System/Core/errorHandler/ErrorHandler.php" />
         <option value="$PROJECT_DIR$/Views/Tasks/index.php" />
         <option value="$PROJECT_DIR$/Views/Layouts/default.php" />
-        <option value="$PROJECT_DIR$/router.php" />
         <option value="$PROJECT_DIR$/Core/Controller.php" />
         <option value="$PROJECT_DIR$/Core/Util/HttpFoundation/Cookie.php" />
         <option value="$PROJECT_DIR$/Core/Util/HttpFoundation/HeaderUtils.php" />
@@ -222,6 +147,8 @@
         <option value="$PROJECT_DIR$/Views/Default/index.php" />
         <option value="$PROJECT_DIR$/request.php" />
         <option value="$PROJECT_DIR$/Controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/Core/Util/HttpFoundation/Request.php" />
+        <option value="$PROJECT_DIR$/router.php" />
       </list>
     </option>
   </component>
@@ -234,7 +161,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -243,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,7 +182,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,7 +191,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -335,24 +262,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="RunManager" selected="PHPUnit.CookieTest.testGetExpiresTime">
-    <configuration name="CookieTest.testGetExpiresTime" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Core\Util\HttpFoundation\Tests\CookieTest" file="$PROJECT_DIR$/Core/Util/HttpFoundation/Tests/CookieTest.php" method="testGetExpiresTime" scope="Method" />
-    </configuration>
-    <configuration name="JsonResponseTest.testConstructorWithSimpleTypes" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Core\Util\HttpFoundation\Tests\JsonResponseTest" file="$PROJECT_DIR$/Core/Util/HttpFoundation/Tests/JsonResponseTest.php" method="testConstructorWithSimpleTypes" scope="Method" />
-    </configuration>
-    <list>
-      <item itemvalue="PHPUnit.JsonResponseTest.testConstructorWithSimpleTypes" />
-      <item itemvalue="PHPUnit.CookieTest.testGetExpiresTime" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHPUnit.CookieTest.testGetExpiresTime" />
-        <item itemvalue="PHPUnit.JsonResponseTest.testConstructorWithSimpleTypes" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -432,11 +341,20 @@
       <workItem from="1541257641687" duration="3200000" />
       <workItem from="1541265346400" duration="1400000" />
       <workItem from="1541266787260" duration="404000" />
+      <workItem from="1541304943847" duration="574000" />
+      <workItem from="1541306154624" duration="20000" />
+      <workItem from="1541306728635" duration="255000" />
+      <workItem from="1541307006028" duration="101000" />
+      <workItem from="1541307674851" duration="62000" />
+      <workItem from="1541681880931" duration="241000" />
+      <workItem from="1541725326139" duration="16000" />
+      <workItem from="1542373966952" duration="198000" />
+      <workItem from="1542399458228" duration="117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248696000" />
+    <option name="totallyTimeSpent" value="250280000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,8 +367,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20822622" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22686376" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -484,7 +403,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Views/Tasks/create.php" />
     <entry file="file://$PROJECT_DIR$/Views/Tasks/edit.php" />
     <entry file="uml://PHP/\Request">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -619,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/System/pdox/Pdox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="510" column="37" lean-forward="true" selection-start-line="510" selection-start-column="37" selection-end-line="510" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/Tasks/Task.php" />
     <entry file="file://$PROJECT_DIR$/Controllers/TasksController.php" />
     <entry file="file://$PROJECT_DIR$/Core/System/Core/pages_messages/Views/code_messages/messages.php">
@@ -643,27 +554,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Tasks/index.php" />
-    <entry file="file://$PROJECT_DIR$/Core/Assets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="29" selection-start-line="29" selection-end-line="36" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispatcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/Layouts/default.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -753,10 +643,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Default/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/System/pdox/Pdox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Assets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Util/HttpFoundation/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="314" column="39" selection-start-line="314" selection-start-column="39" selection-end-line="314" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -767,10 +685,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Default/index.php">
+    <entry file="file://$PROJECT_DIR$/dispatcher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="207">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
         </state>
       </provider>
     </entry>

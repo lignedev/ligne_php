@@ -32,6 +32,10 @@ class Router
     /**
      * Constuye la url si esta es valida, digase que exista el controlador
      * y su accion
+     *
+     * Se omiten los valores de variables de la super global $_GET, no hay mecanismo para procesarlas, usar parametros de metodos
+     * ejemplo: http://host/controller/action/param1/param2/param3
+     *
      * @param $request
      * @param $explode_url
      */

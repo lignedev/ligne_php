@@ -17,6 +17,13 @@
  **/
 class Router
 {
+    /**
+     * Se remueve de la url los parámetros el querystring de la url
+     * para cargar el método del controlador y evitar inconvenientes
+     * en el dispacher
+     * @param $url
+     * @param $request
+     */
     static public function parse($url, $request){
         $url = strtok(trim($url),'?');
         $explode_url = explode('/', $url);
@@ -30,11 +37,8 @@ class Router
     }
 
     /**
-     * Constuye la url si esta es valida, digase que exista el controlador
+     * Construye la url si esta es valida, dígase que exista el controlador
      * y su accion
-     *
-     * Se omiten los valores de variables de la super global $_GET, no hay mecanismo para procesarlas, usar parametros de metodos
-     * ejemplo: http://host/controller/action/param1/param2/param3
      *
      * @param $request
      * @param $explode_url

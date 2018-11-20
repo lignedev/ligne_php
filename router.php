@@ -17,13 +17,6 @@
  **/
 class Router
 {
-    /**
-     * Se remueve de la url los parámetros el querystring de la url
-     * para cargar el método del controlador y evitar inconvenientes
-     * en el dispacher
-     * @param $url
-     * @param $request
-     */
     static public function parse($url, $request){
         $url = strtok(trim($url),'?');
         $explode_url = explode('/', $url);
@@ -37,9 +30,8 @@ class Router
     }
 
     /**
-     * Construye la url si esta es valida, dígase que exista el controlador
+     * Constuye la url si esta es valida, digase que exista el controlador
      * y su accion
-     *
      * @param $request
      * @param $explode_url
      */
@@ -55,7 +47,7 @@ class Router
      * @param $request
      */
     static public function load_index($request){
-        $request->controller = "default";
+        $request->controller = "Default";
         $request->action = "index";
         $request->params = [];
     }

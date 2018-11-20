@@ -23,7 +23,7 @@ class Assets
     static public function setAssets($asset,$cache = true)
     {
         $domain = $_SERVER['SERVER_NAME'];
-        $assets_dir = 'webassets';
+        $assets_dir = 'Webassets';
         return PROTOCOL . '://' . $domain . '/' . self::root_dir() . '/' . $assets_dir . '/' . $asset . self::cache($cache);
     }
 

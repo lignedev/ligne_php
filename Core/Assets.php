@@ -71,10 +71,24 @@ class Assets
     static public function href($url, $param = null){
         $new_url = explode('/',$url);
         $root_dir = explode('/',$_SERVER['REQUEST_URI']);
+        $param = ($param == null)? '' : self::params($param) ;
         if(count($new_url) > 1){
-            return '/' . $root_dir[1] . '/' . trim($new_url[0]) . '/' . trim($new_url[1]) . '/' . trim($param) ;
+            return '/' . $root_dir[1] . '/' . trim($new_url[0]) . '/' . trim($new_url[1]) . $param ;
         }else{
             return '/' . $root_dir[1] . '/' . 'novalid/url';
+        }
+    }
+
+    static private function params($params){
+        if(is_array($params)){
+            $all_params = null;
+            foreach ($params as $key => $value) {
+                $all_params = $all_params . '/' . $value;
+            }
+            return $all_params;
+        }else{
+            $param = '/' . trim($params) ;
+            return $param;
         }
     }
 }

@@ -104,8 +104,8 @@ class Controller
         if(is_array($redirecTo)) {
             $root_dir = $_SERVER['REQUEST_URI'];
             $root_dir = explode('/',$root_dir);
-            $param_ = ($param == null )? '' : $param;
-            header('Location: '. PROTOCOL . '://' . $_SERVER['SERVER_NAME'] . '/' . $root_dir[1] . '/' . $redirecTo['controller'] . '/' . $redirecTo['action'] . '/' . $param_ );
+            $param_ = ($param == null )? '' : '/' . $param;
+            header('Location: '. PROTOCOL . '://' . $_SERVER['SERVER_NAME'] . '/' . $root_dir[1] . '/' . $redirecTo['controller'] . '/' . $redirecTo['action'] . $param_ );
         }else
             header('Location: '.$redirecTo);
     }

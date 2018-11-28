@@ -24,7 +24,8 @@ class DataBase
             'password'	=> $this->credentials["pass"],
             'charset'	=> $this->credentials["charset"],
             'collation'	=> $this->credentials["collation"],
-            'prefix'	=> $this->credentials["prefix"]
+            'prefix'	=> $this->credentials["prefix"],
+            'port'	=> $this->credentials["port"]
         ];
 
         try {

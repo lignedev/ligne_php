@@ -35,7 +35,7 @@ class DataBase
                  * hacen las consultas a la base de datos, es una clase bien completa
                  * que contiene metodos para toda clase de consultas
                 **/
-                require(ROOT . "Core/System/pdox/Pdox.php");
+                require_once(ROOT . "Core/System/pdox/Pdox.php");
 
                 $this->bdd = new Pdox($this->config);
             }

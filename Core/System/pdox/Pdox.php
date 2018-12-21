@@ -78,16 +78,22 @@ class Pdox
     public function table($table)
     {
         if (is_array($table)) {
-            $froms = '';
+            $from = '';
             foreach ($table as $key) {
-                $froms .= $this->prefix . $key . ', ';
+                $from .= $this->prefix . $key . ', ';
             }
-
-            $this->from = rtrim($froms, ', ');
+            $this->from = rtrim($from, ', ');
         } else {
-            $this->from = $this->prefix . $table;
+            if (strpos($table, ',') > 0) {
+                $tables = explode(',', $table);
+                foreach ($tables as $key => &$value) {
+                    $value = $this->prefix . ltrim($value);
+                }
+                $this->from = implode(', ', $tables);
+            } else {
+                $this->from = $this->prefix . $table;
+            }
         }
-
         return $this;
     }
 
@@ -143,19 +149,16 @@ class Pdox
     {
         $on = $field1;
         $table = $this->prefix . $table;
-
         if (! is_null($op)) {
             $on = (! in_array($op, $this->op) ?
-                $this->prefix . $field1 . ' = ' . $this->prefix . $op :
-                $this->prefix . $field1 . ' ' . $op . ' ' . $this->prefix . $field2);
+                $this->from . '.' . $field1 . ' = ' . $table . '.' . $op :
+                $this->from . '.' . $field1 . ' ' . $op . ' ' . $table . '.' . $field2);
         }
-
         if (is_null($this->join)) {
             $this->join = ' ' . $type . 'JOIN' . ' ' . $table . ' ON ' . $on;
         } else {
             $this->join = $this->join . ' ' . $type . 'JOIN' . ' ' . $table . ' ON ' . $on;
         }
-
         return $this;
     }
 
@@ -203,42 +206,39 @@ class Pdox
 
     public function where($where, $op = null, $val = null, $type = '', $andOr = 'AND')
     {
-        if (is_array($where)) {
+        if (is_array($where) && !empty($where)) {
             $_where = [];
-
             foreach ($where as $column => $data) {
                 $_where[] = $type . $column . '=' . $this->escape($data);
             }
             $where = implode(' ' . $andOr . ' ', $_where);
+        } else if (is_null($where) || empty($where)) {
+            return $this;
         } else {
             if (is_array($op)) {
-                $x = explode('?', $where);
-                $w = '';
-
-                foreach ($x as $k => $v) {
-                    if (! empty($v)) {
-                        $w .= $type . $v . (isset($op[$k]) ? $this->escape($op[$k]) : '');
+                $params = explode('?', $where);
+                $_where = '';
+                foreach ($params as $key => $value) {
+                    if (! empty($value)) {
+                        $_where .= $type . $value . (isset($op[$key]) ? $this->escape($op[$key]) : '');
                     }
                 }
-                $where = $w;
+                $where = $_where;
             } elseif (! in_array($op, $this->op) || $op == false) {
                 $where = $type . $where . ' = ' . $this->escape($op);
             } else {
                 $where = $type . $where . ' ' . $op . ' ' . $this->escape($val);
             }
         }
-
         if ($this->grouped) {
             $where = '(' . $where;
             $this->grouped = false;
         }
-
         if (is_null($this->where)) {
             $this->where = $where;
         } else {
             $this->where = $this->where . ' ' . $andOr . ' ' . $where;
         }
-
         return $this;
     }
 
@@ -655,6 +655,17 @@ class Pdox
         return $this->query($query, false);
     }
 
+    public function dropTable($type = false)
+    {
+        $query = 'DROP TABLE ' . $this->from;
+
+        if ($type === true) {
+            return $query;
+        }
+
+        return $this->query($query, false);
+    }
+
     public function analyze()
     {
         return $this->query('ANALYZE TABLE ' . $this->from, false);
@@ -716,7 +727,7 @@ class Pdox
         }
 
         $query = $this->pdo->exec($this->query);
-        if (! $query) {
+        if ($query === false) {
             $this->error = $this->pdo->errorInfo()[2];
             return $this->error();
         }
@@ -729,19 +740,19 @@ class Pdox
         if (is_null($this->query)) {
             return null;
         }
-
         $type = ($array === false) ? PDO::FETCH_OBJ : PDO::FETCH_ASSOC;
         $query = $this->pdo->query($this->query);
         if (! $query) {
             $this->error = $this->pdo->errorInfo()[2];
             return $this->error();
         }
-
         if ($all) {
-            return $query->fetchAll($type);
+            $result = $query->fetchAll($type);
+        } else {
+            $result = $query->fetch($type);
         }
-
-        return $query->fetch($type);
+        $this->numRows = count($result);
+        return $result;
     }
 
     public function fetchAll($array = false)
@@ -752,7 +763,6 @@ class Pdox
     public function query($query, $all = true, $array = false)
     {
         $this->reset();
-
         if (is_array($all) || func_num_args() === 1) {
             $params = explode('?', $query);
             $newQuery = '';
@@ -761,11 +771,9 @@ class Pdox
                     $newQuery .= $value . (isset($all[$key]) ? $this->escape($all[$key]) : '');
                 }
             }
-
             $this->query = $newQuery;
             return $this;
         }
-
         $this->query = preg_replace('/\s\s+|\t\t+/', ' ', trim($query));
         $str = false;
         foreach (['select', 'optimize', 'check', 'repair', 'checksum', 'analyze'] as $value) {
@@ -774,33 +782,26 @@ class Pdox
                 break;
             }
         }
-
         $cache = false;
         if (! is_null($this->cache)) {
             $cache = $this->cache->getCache($this->query, $array);
         }
-
         if (! $cache && $str) {
             $sql = $this->pdo->query($this->query);
-
             if ($sql) {
                 $this->numRows = $sql->rowCount();
-
                 if (($this->numRows > 0)) {
                     if ($all) {
                         $q = [];
-
-                        while ($result = ($array != false) ? $sql->fetchAll(PDO::FETCH_OBJ) : $sql->fetchAll(PDO::FETCH_ASSOC)) {
+                        while ($result = ($array == false) ? $sql->fetchAll(PDO::FETCH_OBJ) : $sql->fetchAll(PDO::FETCH_ASSOC)) {
                             $q[] = $result;
                         }
-
                         $this->result = $q[0];
                     } else {
-                        $q = ($array != false) ? $sql->fetch(PDO::FETCH_OBJ) : $sql->fetch(PDO::FETCH_ASSOC);
+                        $q = ($array == false) ? $sql->fetch(PDO::FETCH_OBJ) : $sql->fetch(PDO::FETCH_ASSOC);
                         $this->result = $q;
                     }
                 }
-
                 if (! is_null($this->cache)) {
                     $this->cache->setCache($this->query, $this->result);
                 }
@@ -808,16 +809,13 @@ class Pdox
             } else {
                 $this->cache = null;
                 $this->error = $this->pdo->errorInfo()[2];
-
                 return $this->error();
             }
         } elseif ((! $cache && ! $str) || ($cache && ! $str)) {
             $this->cache = null;
             $this->result = $this->pdo->exec($this->query);
-
             if ($this->result === false) {
                 $this->error = $this->pdo->errorInfo()[2];
-
                 return $this->error();
             }
         } else {
@@ -825,9 +823,7 @@ class Pdox
             $this->result = $cache;
             $this->numRows = count($this->result);
         }
-
         $this->queryCount++;
-
         return $this->result;
     }
 

@@ -41,22 +41,37 @@ class Controller
      * cargará el diseño solicitado en el directorio Views. Además, esto nos
      * permite tener un diseño para evitar la estúpida repetición de HTML en nuestras vistas.
      *
+     * El parametro @external_view Se utiliza para indicarle al metodo
+     * @render si la vista que se esta cargando no esta dentro del ambito
+     * del controlador actual, es util para cargar componentes de otras vistas
+     * o otras vistas completas
+     *
      * @param $filename
-     * @param null Titulo de la pagina
+     * @param null $title
+     * @param bool $external_view
+     * @param null $other_layout
      */
-    function render($filename,$title = null)
+    function render($filename,$title = null,$external_view = false,$other_layout = null)
     {
         extract($this->vars);
         ob_start();
-        $view_file = ROOT . "Views/" . ucfirst(str_replace('Controller', '', get_class($this))) . '/' . $filename . '.php';
+        if($external_view){
+            $view_file = ROOT . "Views/" . $filename . '.php';
+        }else{
+            $view_file = ROOT . "Views/" . ucfirst(str_replace('Controller', '', get_class($this))) . '/' . $filename . '.php';
+        }
+
         if(file_exists($view_file))
             require($view_file);
         else
             $this->view_nonexists($filename);
+
         $this->page_title = $title;
+        $this->layout = ($other_layout != null)? $other_layout : $this->layout;
         $content_for_layout = ob_get_clean();
         $this->render_layout($content_for_layout);
     }
+
 
     /**
      * Requiere el layout existente y dentro pasa el contenido

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c30ad5-e240-41b9-86e1-5ed7797d0a0d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Core/System/DataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/System/DataBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/System/pdox/Pdox.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/System/pdox/Pdox.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +29,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,7 +41,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>HORA_FINAL_LABORAL</find>
       <find>total_time</find>
       <find>$dia_inicial</find>
       <find>dia_final</find>
@@ -69,6 +70,7 @@
       <find>HTTP_USER_AGENT</find>
       <find>tok</find>
       <find>strtok</find>
+      <find>delete</find>
     </findStrings>
     <replaceStrings>
       <replace>Core\Util</replace>
@@ -110,7 +112,6 @@
         <option value="$PROJECT_DIR$/Core/System/Core/core.php" />
         <option value="$PROJECT_DIR$/Controllers/LoginController.php" />
         <option value="$PROJECT_DIR$/Core/System/Core/autoload.php" />
-        <option value="$PROJECT_DIR$/Core/System/pdox/Pdox.php" />
         <option value="$PROJECT_DIR$/Core/System/Core/ErrorHandler.php" />
         <option value="$PROJECT_DIR$/Core/System/Core/ErrorHandler/ErrorHandler.php" />
         <option value="$PROJECT_DIR$/Webroot/index.php" />
@@ -133,10 +134,11 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/Webroot/.htaccess" />
         <option value="$PROJECT_DIR$/Config/config.php.ini" />
-        <option value="$PROJECT_DIR$/Core/Controller.php" />
         <option value="$PROJECT_DIR$/Core/Assets.php" />
         <option value="$PROJECT_DIR$/Views/Default/index.php" />
         <option value="$PROJECT_DIR$/Core/System/DataBase.php" />
+        <option value="$PROJECT_DIR$/Core/System/pdox/Pdox.php" />
+        <option value="$PROJECT_DIR$/Core/Controller.php" />
       </list>
     </option>
   </component>
@@ -176,6 +178,13 @@
               <item name="ligne_php_pro" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
               <item name="System" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ligne_php_pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ligne_php_pro" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="System" type="462c0819:PsiDirectoryNode" />
+              <item name="pdox" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ligne_php_pro" type="b2602c69:ProjectViewProjectNode" />
@@ -373,11 +382,14 @@
       <workItem from="1543420922991" duration="82000" />
       <workItem from="1543442308367" duration="259000" />
       <workItem from="1543521425360" duration="19000" />
+      <workItem from="1544576410773" duration="17000" />
+      <workItem from="1545248167398" duration="34000" />
+      <workItem from="1545401318893" duration="116000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252572000" />
+    <option name="totallyTimeSpent" value="252739000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -391,7 +403,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647815" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22943445" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -631,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/System/pdox/Pdox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Util/HttpFoundation/Request.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -701,13 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="110" column="5" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/Default/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -726,6 +724,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/System/pdox/Pdox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="656" lean-forward="true" selection-start-line="656" selection-end-line="656" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
         </state>
       </provider>
     </entry>

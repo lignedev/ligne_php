@@ -1,6 +1,16 @@
 # Ligne Framework
 
 ---
+
+Ligne es un "Framework" MVC que ejecuta PHP 7.1.3 o superior. Prácticamente ya todo está preparado, solo necesita realizar algunas configuraciones mínimas y puedes comenzar a trabajar, las distintas partes de Ligne funcionan bien juntas o por separado.
+
+El objetivo de esta descripción general es presentar los conceptos generales en Ligne y ofrecerle una descripción general rápida de cómo se implementan esos conceptos.
+
+**Convenciones sobre la configuración**
+
+Ligne proporciona una estructura organizativa básica que cubre nombres de clase, nombres de archivo y otras convenciones. Si bien las convenciones toman algo de tiempo para aprender, al seguir las convenciones que proporciona Ligne puede evitar una configuración innecesaria y hacer una estructura de aplicación uniforme que simplifique el trabajo con varios proyectos.
+
+
 ## 📚Documentación
 
 https://itsalb3rt.github.io/ligne_php_framework_documentacion/Introduccion.htm
@@ -17,29 +27,12 @@ acceso htaccess.
 Vista rapida de una **url** con el framework
 
 ![enter image description here](https://i.imgur.com/kHEWAwK.png)
----
-## Si estás viendo esto es que estas en la versión de desarrollo por lo que esta rama no tiene la app demo.
-## 🚀App Demo
 
-URL: http://localhost/ligne_php/tasks/index
+# Creditos:
 
-Una sencilla app de tareas personales las cuales se pueden
-crear, modificar y eliminar, como extra se puede indicar cuales 
-de estas ya estan completas.
-
-![Main](https://i.imgur.com/f3Q69fX.png)
-
-## Index (Dev stuff)
-La APP demo está en la rama MASTER por el momento https://gitlab.com/itsalb3rt/ligne_php_framework/tree/master
-
-Debes crear la base de datos junto a su tabla, el siguiente script lo hace por ti;
-
-https://gitlab.com/itsalb3rt/ligne_php_framework/blob/master/Documentacion/taskapp.sql
-
-Una vez descargado el proyecto solo debes entrar por la siguiente url URL: http://localhost/ligne_php/tasks/index
-
-![](https://i.imgur.com/xJ3IzVv.png)
-
-
-
+- **Desarrollado y mantenido por: **@itsalb3rt
+- **FormBuilder : **@joshcanhelp
+- **QueryBuilder PDOx : **@izniburak
+- **Revision de documentacion: **Walner Betances
+- **Inspiración:** Yanibel Ligne Gutierrez Mercado
 

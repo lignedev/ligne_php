@@ -30,9 +30,9 @@ Vista rapida de una **url** con el framework
 
 # Creditos:
 
-- **Desarrollado y mantenido por:** @itsalb3rt
-- **FormBuilder :** @joshcanhelp
-- **QueryBuilder PDOx :** @izniburak
+- **Desarrollado y mantenido por:** [@itsalb3rt](https://github.com/itsalb3rt "@itsalb3rt")
+- **FormBuilder :** [@joshcanhelp](https://github.com/joshcanhelp "@joshcanhelp")
+- **QueryBuilder PDOx :** [@izniburak](https://github.com/izniburak "@izniburak")
 - **Revision de documentacion:** Walner Betances
 - **Inspiración:** Yanibel Ligne Gutierrez Mercado
 

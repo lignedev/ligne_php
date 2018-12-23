@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c5c30ad5-e240-41b9-86e1-5ed7797d0a0d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webroot/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Webroot/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/System/pdox/Pdox.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/System/pdox/Pdox.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +28,8 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Webroot/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
@@ -37,6 +37,19 @@
               <folding>
                 <element signature="e#6#94#0#PHP" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pdox.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Core/System/pdox/Pdox.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="501" column="5" lean-forward="true" selection-start-line="501" selection-start-column="5" selection-end-line="501" selection-end-column="5" />
+              <folding>
+                <element signature="n#style#0;n#em#0;n#h4#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#em#0;n#h4#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,9 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>total_time</find>
-      <find>$dia_inicial</find>
-      <find>dia_final</find>
       <find>total</find>
       <find>die</find>
       <find>try</find>
@@ -84,6 +94,9 @@
       <find>tok</find>
       <find>strtok</find>
       <find>delete</find>
+      <find>$on = (! in_array($op, $this-&gt;op) ?</find>
+      <find>if (! is_null($op)) {</find>
+      <find>$msg =</find>
     </findStrings>
     <replaceStrings>
       <replace>Core\Util</replace>
@@ -101,7 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Views/Layouts/nuevo.php" />
         <option value="$PROJECT_DIR$/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/Views/Home/inicio.php" />
         <option value="$PROJECT_DIR$/webassets/css/foo/foo.css" />
@@ -149,9 +161,10 @@
         <option value="$PROJECT_DIR$/Core/Assets.php" />
         <option value="$PROJECT_DIR$/Views/Default/index.php" />
         <option value="$PROJECT_DIR$/Core/System/DataBase.php" />
-        <option value="$PROJECT_DIR$/Core/System/pdox/Pdox.php" />
         <option value="$PROJECT_DIR$/Core/Controller.php" />
         <option value="$PROJECT_DIR$/Webroot/index.php" />
+        <option value="$PROJECT_DIR$/Core/System/pdox/Pdox.php" />
+        <option value="$PROJECT_DIR$/../ligne_php_util/pdox/src/Pdox.php" />
       </list>
     </option>
   </component>
@@ -164,7 +177,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -173,7 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,6 +231,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,12 +417,13 @@
       <workItem from="1545248167398" duration="34000" />
       <workItem from="1545401318893" duration="116000" />
       <workItem from="1545520356569" duration="711000" />
-      <workItem from="1545582062797" duration="58000" />
+      <workItem from="1545582062797" duration="207000" />
+      <workItem from="1545596831884" duration="148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253508000" />
+    <option name="totallyTimeSpent" value="253805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -424,7 +438,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23586118" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23907454" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -458,7 +472,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Views/Tasks/edit.php" />
     <entry file="uml://PHP/\Request">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -741,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/System/pdox/Pdox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="656" lean-forward="true" selection-start-line="656" selection-end-line="656" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -762,6 +768,28 @@
           <folding>
             <element signature="e#6#94#0#PHP" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ligne_php_util/pdox/src/Pdox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="503" column="27" lean-forward="true" selection-start-line="503" selection-start-column="27" selection-end-line="503" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#em#0;n#h4#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#em#0;n#h4#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/System/pdox/Pdox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="501" column="5" lean-forward="true" selection-start-line="501" selection-start-column="5" selection-end-line="501" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#em#0;n#h4#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#em#0;n#h4#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

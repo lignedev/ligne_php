@@ -150,9 +150,7 @@ class Pdox
         $on = $field1;
         $table = $this->prefix . $table;
         if (! is_null($op)) {
-            $on = (! in_array($op, $this->op) ?
-                $this->from . '.' . $field1 . ' = ' . $table . '.' . $op :
-                $this->from . '.' . $field1 . ' ' . $op . ' ' . $table . '.' . $field2);
+            $on = ( !in_array($op, $this->op) ? $field1 . ' = ' . $op : $field1 . ' ' . $op . ' ' . $field2 );
         }
         if (is_null($this->join)) {
             $this->join = ' ' . $type . 'JOIN' . ' ' . $table . ' ON ' . $on;

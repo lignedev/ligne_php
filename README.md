@@ -1,8 +1,8 @@
-# Ligne Framework
+# Ligne Framework 🐘
 
 ---
 
-Ligne es un "Framework" MVC que ejecuta PHP 7.1.3 o superior. Prácticamente ya todo está preparado, solo necesita realizar algunas configuraciones mínimas y puedes comenzar a trabajar, las distintas partes de Ligne funcionan bien juntas o por separado.
+Ligne es un "Framework" **MVC** que ejecuta PHP 7.1.3 o superior. Prácticamente ya todo está preparado, solo necesita realizar algunas configuraciones mínimas y puedes comenzar a trabajar, las distintas partes de Ligne funcionan bien juntas o por separado.
 
 El objetivo de esta descripción general es presentar los conceptos generales en Ligne y ofrecerle una descripción general rápida de cómo se implementan esos conceptos.
 
@@ -12,6 +12,8 @@ Ligne proporciona una estructura organizativa básica que cubre nombres de clase
 
 
 ## 📚Documentación
+
+El siguiente enlace te lleva a la documentación, la misma es actualizada con cada actualización del framework por lo que puedes estar seguro que todos los nuevos cambios ya se incluyen en ella.
 
 https://itsalb3rt.github.io/ligne_php_framework_documentacion/Introduccion.htm
 
@@ -28,7 +30,7 @@ Vista rapida de una **url** con el framework
 
 ![enter image description here](https://i.imgur.com/kHEWAwK.png)
 
-# Creditos:
+# 🚀 Creditos: 
 
 - **Desarrollado y mantenido por:** [@itsalb3rt](https://github.com/itsalb3rt "@itsalb3rt")
 - **FormBuilder :** [@joshcanhelp](https://github.com/joshcanhelp "@joshcanhelp")

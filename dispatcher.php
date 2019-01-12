@@ -34,7 +34,7 @@ class Dispatcher
     public function loadController()
     {
         $name = $this->request->controller . "Controller";
-        $file = ROOT . 'Controllers/' . $name . '.php';
+        $file = ROOT . 'Controllers/' . ucfirst($name) . '.php';
         if(file_exists($file)){
             require($file);
             $controller = new $name();

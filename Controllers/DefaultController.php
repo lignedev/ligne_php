@@ -19,9 +19,9 @@ class DefaultController extends Controller
     public function index()
     {
         $data['framework_name'] = "Ligne Framework";
-        $data['version'] = "v1.3";
+        $data['version'] = "v1.4";
         $data['environment'] = "Dev";
-        $data['date'] = "Oct 2018";
+        $data['date'] = "Feb 2019";
         $data['external_components_included'] = "HttpFoundation";
         $data['autor'] = "Albert Eduardo Hidalgo Taveras";
         $this->setData($data); //envia datos a la vista

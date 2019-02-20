@@ -17,11 +17,24 @@
  **/
 class Router
 {
+    /**
+     * Las variables @projectDir y @offSet se incluyeron en la actualizacion del 20/02/2019 para
+     * que el framework pueda estar en cualquier directorio o subdirectorio del servidor
+     *
+     * Esto analiza en que nivel de la URLI estan el contorlador, la accion y los parametros
+     *
+     * @param $url
+     * @param $request
+     */
     static public function parse($url, $request){
         $url = strtok(trim($url),'?');
         $explode_url = explode('/', $url);
-        $explode_url = array_slice($explode_url, 2);
-        if ($url == '/' . self::root_dir() . '/' )
+
+        $projectDir = explode('/',ROOT);
+        $offSet = count($projectDir)-3;
+
+        $explode_url = array_slice($explode_url, $offSet);
+        if ($url == '/' . self::root_dir() . '/' || strlen($explode_url[0]) == 0 )
             self::load_index($request);
         elseif(self::is_array_url_valid($explode_url))
             self::route_construct($request,$explode_url);

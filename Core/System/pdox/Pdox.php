@@ -749,7 +749,9 @@ class Pdox
         } else {
             $result = $query->fetch($type);
         }
-        $this->numRows = count($result);
+        if(is_array($result)){
+            $this->numRows = count($result);
+        }
         return $result;
     }
 

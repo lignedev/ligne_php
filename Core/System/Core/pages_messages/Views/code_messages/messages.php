@@ -245,6 +245,16 @@
             border: 1px solid rgb(225, 225, 225);
             border-radius: 4px;
         }
+        .error-description{
+            padding: .2rem .5rem;
+            margin: 10px .2rem;
+            font-size: 85%;
+            background: rgb(241, 241, 241);
+            border: 1px solid rgb(225, 225, 225);
+            border-radius: 4px;
+            line-height: 1.8em;
+        }
+
         ul li {
             margin: 8px auto;
         }

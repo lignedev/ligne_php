@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c5c30ad5-e240-41b9-86e1-5ed7797d0a0d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/System/pdox/Pdox.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/System/pdox/Pdox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/System/Core/errorHandler/ErrorHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/System/Core/errorHandler/ErrorHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/System/Core/pages_messages/Views/code_messages/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/System/Core/pages_messages/Views/code_messages/messages.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,7 +114,6 @@
         <option value="$PROJECT_DIR$/Core/System/Core/ErrorHandler.php" />
         <option value="$PROJECT_DIR$/Core/System/Core/ErrorHandler/ErrorHandler.php" />
         <option value="$PROJECT_DIR$/Models/Tasks/Task.php" />
-        <option value="$PROJECT_DIR$/Core/System/Core/errorHandler/ErrorHandler.php" />
         <option value="$PROJECT_DIR$/Views/Tasks/index.php" />
         <option value="$PROJECT_DIR$/Views/Layouts/default.php" />
         <option value="$PROJECT_DIR$/Core/Util/HttpFoundation/Cookie.php" />
@@ -133,11 +133,12 @@
         <option value="$PROJECT_DIR$/Core/Controller.php" />
         <option value="$PROJECT_DIR$/Webroot/index.php" />
         <option value="$PROJECT_DIR$/../ligne_php_util/pdox/src/Pdox.php" />
-        <option value="$PROJECT_DIR$/Core/System/Core/pages_messages/Views/code_messages/messages.php" />
         <option value="$PROJECT_DIR$/dispatcher.php" />
         <option value="$PROJECT_DIR$/router.php" />
         <option value="$PROJECT_DIR$/Controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/Core/System/pdox/Pdox.php" />
+        <option value="$PROJECT_DIR$/Core/System/Core/pages_messages/Views/code_messages/messages.php" />
+        <option value="$PROJECT_DIR$/Core/System/Core/errorHandler/ErrorHandler.php" />
       </list>
     </option>
   </component>
@@ -159,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,12 +183,55 @@
               <item name="ligne_php_pro" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
               <item name="System" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ligne_php_pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ligne_php_pro" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="System" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="errorHandler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ligne_php_pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ligne_php_pro" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="System" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="pages_messages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ligne_php_pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ligne_php_pro" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="System" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="pages_messages" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ligne_php_pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ligne_php_pro" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="System" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="pages_messages" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="code_messages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ligne_php_pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ligne_php_pro" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="System" type="462c0819:PsiDirectoryNode" />
               <item name="pdox" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,11 +424,13 @@
       <workItem from="1548459690720" duration="354000" />
       <workItem from="1550690823794" duration="2956000" />
       <workItem from="1556026718364" duration="180000" />
+      <workItem from="1561556185162" duration="77000" />
+      <workItem from="1563548350844" duration="1097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257885000" />
+    <option name="totallyTimeSpent" value="259059000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,20 +442,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25514138" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26156813" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" weight="0.32969153" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3292683" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -554,13 +600,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/Tasks/Task.php" />
     <entry file="file://$PROJECT_DIR$/Controllers/TasksController.php" />
-    <entry file="file://$PROJECT_DIR$/Core/System/Core/errorHandler/ErrorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/Tasks/index.php" />
     <entry file="file://$PROJECT_DIR$/Views/Layouts/default.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -638,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -694,31 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Webroot/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/System/Core/pages_messages/Views/code_messages/messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
           <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispatcher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -729,21 +740,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/System/pdox/Pdox.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="753" column="9" selection-start-line="753" selection-start-column="9" selection-end-line="753" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Webroot/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="21" column="77" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="77" />
           <folding>
-            <element signature="n#style#0;n#em#0;n#h4#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#em#0;n#h4#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dispatcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/System/Core/pages_messages/Views/code_messages/messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="320" column="7" selection-start-line="320" selection-start-column="7" selection-end-line="320" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/System/Core/errorHandler/ErrorHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>

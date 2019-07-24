@@ -306,7 +306,7 @@
                     <?php
                     $e = new \Exception;
                     $data = explode('#',$e);
-                    $route = str_replace(DS ,'\\',ROOT);
+                    $route = str_replace(DIRECTORY_SEPARATOR ,'\\',ROOT);
                     foreach($data as $key => $val){
                         if($key > 0 ){
                             echo '<div>'. str_replace($route,'',$data[$key]) . '</div>';

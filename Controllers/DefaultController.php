@@ -21,7 +21,7 @@ class DefaultController extends Controller
         $data['framework_name'] = "Ligne Framework";
         $data['version'] = "v1.4";
         $data['environment'] = "Dev";
-        $data['date'] = "Feb 2019";
+        $data['date'] = "Jul 2019";
         $data['external_components_included'] = "HttpFoundation";
         $data['autor'] = "Albert Eduardo Hidalgo Taveras";
         $this->setData($data); //envia datos a la vista

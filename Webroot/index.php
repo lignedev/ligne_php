@@ -31,14 +31,16 @@ define('PROTOCOL','http');
  * el sistema esta en produccion
  **/
 define('ENVIROMENT','dev');
-
 /**
  * Esta funcion es utilizada para mostrar los errores mas comunes en una vista
  * mas amigable para el desarrollador, no deberia estar en modo de produccion ya que
  * prodria revelar datos que usted no desea que los usuarios sepan
  *
  * Acceso a base de datos, rutas, nombre de clases, directorios, etc...
- **/
+ * @param $header
+ * @param $description
+ * @param null $route
+ */
 function __show_dev_messages__($header,$description,$route = null){
     if(ENVIROMENT == 'dev'){
         ob_clean (); //Limpia lo que sea que este antes de esta salida
@@ -50,13 +52,11 @@ function __show_dev_messages__($header,$description,$route = null){
     }
 }
 
-//algunos archivos
-
 /**
  * Carga todas las clases que se utilicen con la
  * palabra clase use, esto es gracias al namespace
  **/
-require_once(ROOT . 'Core/System/Core/autoload.php');
+require_once(ROOT . 'Core/System/Core/Autoload.php');
 /**
  * El el nucleo centrar el framework, carga clases escenciales
  * para el funcionamiento

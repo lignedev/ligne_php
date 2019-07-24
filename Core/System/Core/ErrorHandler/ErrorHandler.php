@@ -22,7 +22,7 @@ class ErrorHandler
     public function errorHandler($errno, $errstr, $errfile, $errline)
     {
         if($this->is_notice($errno) || $this->is_warning($errno) || $this->is_fatal_error($errno)){
-            $file_without_root_dir = str_replace(str_replace(DS,'\\',ROOT),'',$errfile);
+            $file_without_root_dir = str_replace(str_replace(DIRECTORY_SEPARATOR,'\\',ROOT),'',$errfile);
             __show_dev_messages__($errstr, "<span class='code'>$errstr</span> " . $file_without_root_dir  . " <span class='code'>on line $errline</span>");
         }
     }
@@ -39,7 +39,7 @@ class ErrorHandler
             $errfile = $error["file"];
             $errline = $error["line"];
             $errstr  = $error["message"];
-            $file_without_root_dir = str_replace(str_replace(DS,'\\',ROOT),'',$errfile);
+            $file_without_root_dir = str_replace(str_replace(DIRECTORY_SEPARATOR,'\\',ROOT),'',$errfile);
             __show_dev_messages__(substr($errstr,0,50) . '...' , "<p class='error-description'>$errstr</p> " . $file_without_root_dir  . " <span class='code'>on line $errline</span>");
         }
     }

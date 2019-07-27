@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\System\Core\ErrorHandler;
+namespace Core\System\Core\errorHandler;
 /**
  * Captura los errores comunes que pueden ocurrir
  * dentro de un proyecto, esto no manja todos los errores del framework ya que

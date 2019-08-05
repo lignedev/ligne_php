@@ -1,36 +1,18 @@
-# Ligne Framework
-
+---
+description: Ligne es un "Framework" MVC que ejecuta PHP 7.1.3 o superior.
 ---
 
-## Arquitectura Global
+# Ligne Framework 🐘
 
-![](https://i.imgur.com/vDLo9hG.png)
+## Bienvenido a Ligne Framework
 
-Al acceder a nuestro sitio web, el usuario será redireccionado
-automáticamente a Webroot / index.php gracias a dos archivos de
-acceso htaccess.
+Ligne es un **"Framework"** MVC que ejecuta **PHP 7.1.3 o superior**. Prácticamente ya todo está preparado, solo necesita realizar algunas configuraciones mínimas y puedes comenzar a trabajar, las distintas partes de Ligne funcionan bien juntas o por separado.
 
-## Rutas
-Vista rapida de una **url** con el framework
+El objetivo de esta descripción general es presentar los conceptos generales en Ligne y ofrecerle una descripción general rápida de cómo se implementan esos conceptos.
 
-![enter image description here](https://i.imgur.com/kHEWAwK.png)
+**Convenciones sobre la configuración**
 
-## App Demo
+Ligne proporciona una estructura organizativa básica que cubre nombres de clase, nombres de archivo y otras convenciones. Si bien las convenciones toman algo de tiempo para aprender, al seguir las convenciones que proporciona Ligne puede evitar una configuración innecesaria y hacer una estructura de aplicación uniforme que simplifique el trabajo con varios proyectos.
 
-URL: http://localhost/ligne_php/tasks/index
-
-Una sencilla app de tareas personales las cuales se pueden
-crear, modificar y eliminar, como extra se puede indicar cuales 
-de estas ya estan completas.
-
-![Main](https://i.imgur.com/f3Q69fX.png)
-
-## Index (Dev stuff)
-
-URL: http://localhost/ligne_php/
-
-![](https://i.imgur.com/xJ3IzVv.png)
-
-
-
+\*\*\*\*
 

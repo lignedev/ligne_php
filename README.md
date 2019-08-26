@@ -15,7 +15,7 @@ Ligne proporciona una estructura organizativa básica que cubre nombres de clase
 
 El siguiente enlace te lleva a la documentación, la misma es actualizada con cada actualización del framework por lo que puedes estar seguro que todos los nuevos cambios ya se incluyen en ella.
 
-https://itsalb3rt.github.io/ligne_php_framework_documentacion/Introduccion.htm
+https://josuesantana17.gitbook.io/ligne-framework-php/
 
 ## 🏢Arquitectura Global
 

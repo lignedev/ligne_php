@@ -22,7 +22,7 @@ class DefaultController extends Controller
         $data['version'] = "2.0.0 Dev";
         $data['environment'] = "Dev";
         $data['date'] = "* 2019";
-        $data['externalComponentsIncluded'] = ["Ligne/Error Handler","Symfony/HttpFoundation","Izniburak/PDOX"];
+        $data['externalComponentsIncluded'] = ["Ligne/Error Handler","Izniburak/PDOX"];
         $data['autor'] = "Albert Eduardo Hidalgo Taveras";
         $this->setData($data);
         $this->render("index",'Ligne v2');

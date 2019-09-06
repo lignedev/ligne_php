@@ -28,7 +28,8 @@ class Model
                 'charset'	=> $this->credentials["charset"],
                 'collation'	=> $this->credentials["collation"],
                 'prefix'	=> $this->credentials["prefix"],
-                'port'	=> $this->credentials["port"]
+                'port'	=> $this->credentials["port"],
+                'debug' =>false
             ];
             /**
              * Pdox es un Query Builder usado para facilitar la manera en que se

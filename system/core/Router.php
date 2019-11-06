@@ -30,18 +30,19 @@ class Router
      */
     static public function parse(string $url,object $request):void{
         $url = strtok(trim($url),'?');
-        $explode_url = explode('/', $url);
+        $controllerAndAction = explode('/', $url);
 
         $projectDir = explode('/',__ROOT__DIR__);
-        $offSet = count($projectDir)-3;
+        $offSet = count($projectDir) - 1;
 
-        $explode_url = array_slice($explode_url, $offSet);
-        if ($url == '/' . self::rootDir() . '/' || strlen($explode_url[0]) == 0 )
+        $controllerAndAction = [$controllerAndAction[$offSet - 2],$controllerAndAction[$offSet - 1]];
+
+        if ($url == '/' . self::rootDir() . '/' || strlen($controllerAndAction[0]) == 0 )
             self::loadIndex($request);
-        elseif(self::isArrayUrlValid($explode_url))
-            self::routeConstruct($request,$explode_url);
+        elseif(self::isArrayUrlValid($controllerAndAction))
+            self::routeConstruct($request,$controllerAndAction);
         else
-            self::showNonexistentController($explode_url[0]);
+            self::showNonexistentController($controllerAndAction[0]);
     }
 
     /**
@@ -94,9 +95,9 @@ class Router
      * @return string
      */
     static private function rootDir():string {
-        $root_dir = $_SERVER['REQUEST_URI'];
+        $root_dir = str_replace('/system/core','',__DIR__);
         $root_dir = explode('/',$root_dir);
-        return $root_dir[1];
+        return $root_dir[count($root_dir)-1];
     }
     /**
      * Muestra una pantalla cuando en la ruta se ha insertado un

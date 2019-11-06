@@ -22,23 +22,8 @@ class Assets
      */
     static public function setAssets(string $asset,bool $cache = true):string
     {
-        $domain = $_SERVER['SERVER_NAME'];
         $assets_dir = 'web/assets';
-        return PROTOCOL . '://' . $domain . '/' . self::rootDir() . '/' . $assets_dir . '/' . $asset . self::cache($cache);
-    }
-
-    /**
-     * Retorna el nombre de la carpeta base del proyecto
-     * esto es relativo ya que la carpeta donde esta el framework podria
-     * llamarse de cualquier manera y con esto se obtiene este nombre para
-     * hacer referencia a los assets
-     *
-     * @return string
-     */
-    static private function rootDir():string {
-        $root_dir = $_SERVER['REQUEST_URI'];
-        $root_dir = explode('/',$root_dir);
-        return $root_dir[1];
+        return '../' . $assets_dir . '/' . $asset . self::cache($cache);
     }
 
     /**

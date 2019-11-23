@@ -21,10 +21,7 @@ use Ligne\ErrorHandler;
 class Router
 {
     /**
-     * Las variables @projectDir y @offSet se incluyeron en la actualizacion del 20/02/2019 para
-     * que el framework pueda estar en cualquier directorio o subdirectorio del servidor
-     *
-     * Esto analiza en que nivel de la URLI estan el contorlador, la accion y los parametros
+     * Load the controller, action and params user request from a URL.
      *
      * @param $url
      * @param $request

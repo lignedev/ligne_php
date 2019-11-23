@@ -1,2 +1,2 @@
 RewriteEngine on
-RewriteRule ^([a-zA-Z0-9\-\_\/]*)$ Webroot/$1
+RewriteRule ^([a-zA-Z0-9\-\_\/]*)$ system/webroot/$1

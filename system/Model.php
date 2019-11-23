@@ -16,8 +16,10 @@ class Model
 
     public function db() {
         if(is_null($this->bdd)) {
-            // Leer credenciales desde el  archivo ini
-            $this->credentials = parse_ini_file(__ROOT__DIR__ . "system/config/config.php.ini");
+            /**
+             * Load the database credentials of the config file
+            */
+            $this->credentials = parse_ini_file( str_replace('\\','/',__DIR__) . "/config/config.php.ini");
 
             $this->config = [
                 'host'		=> $this->credentials["host"],
@@ -28,12 +30,12 @@ class Model
                 'charset'	=> $this->credentials["charset"],
                 'collation'	=> $this->credentials["collation"],
                 'prefix'	=> $this->credentials["prefix"],
-                'port'	=> $this->credentials["port"]
+                'port'	=> $this->credentials["port"],
+                'debug' =>false
             ];
             /**
-             * Pdox es un Query Builder usado para facilitar la manera en que se
-             * hacen las consultas a la base de datos, es una clase bien completa
-             * que contiene metodos para toda clase de consultas
+             * Load PDOX query builder for create a OOP abstraction for
+             * database
              **/
             $this->bdd = new Pdox($this->config);
         }

@@ -1,18 +1,13 @@
 <?php
-//Constantes
-define('__ROOT__DIR__', str_replace("system/webroot/FrontController.php", "", $_SERVER["SCRIPT_FILENAME"]));
 /**
- * Carga todas las clases que se utilicen con la
- * palabra clase use, esto es gracias al namespace
- **/
+ * Get the project relative dir for internal framework tasks
+ */
+define('__ROOT__DIR__', str_replace('system/webroot','',str_replace('\\','/',__DIR__)));
+
 require_once __ROOT__DIR__.'vendor/autoload.php';
-/**
- * WebRoot Es el archivo que enlaza todos los mecanismos globales del Framework
- **/
 
 /**
- * Verifica la version del servidor, las versiones debajo de la 7.1.3 no soportan
- * ciertas caracteristicas como la palabra recervada const en propiedades de clases.
+ * Check if the version of php server is the current compatible version
  **/
 if(version_compare(PHP_VERSION, '7.2', '>=') == false ){
     echo '<meta charset="UTF-8">';
@@ -25,20 +20,22 @@ if(version_compare(PHP_VERSION, '7.2', '>=') == false ){
 }
 
 /**
- * Esta constante define el protocolo utilizado en el momento, es utilizado principlamente para
- * agregar los assets y el redireccionamiento con el metodo del Controller principal
+ * Global scope constant for specific the protocol to use
  **/
 define('PROTOCOL','http');
+
 /**
- * Esta constante se define para determinar en que entorno se encuentra la aplicacion usando
- * el framework, esto para evitar mostrar errores no deseados a los usuarios cuando
- * el sistema esta en produccion
+ * Enviroment specific to internal framework use.
+ *
+ * Examples;
+ *
+ * The framework use this constant for check if an error ocurred, show another
+ * view and HTTP status code error
  **/
 define('ENVIROMENT','dev');
 
 /**
- * El el nucleo centrar el framework, carga clases escenciales
- * para el funcionamiento
+ * Load the main framework parts
  **/
 
 require_once(__ROOT__DIR__ . 'system/Controller.php');

@@ -9,28 +9,25 @@ use Ligne\ErrorHandler;
 class Controller
 {
     /**
-     * Almacena los datos que se quieren pasar a la vista
+     * $vars is the data you want pass to view, arrays, string, class, object.
      **/
     private $vars = [];
+
     /**
-     * Contiene el nombre de la 'vista' donde se renderizaran las vistas, por defecto
-     * este sera el "base.php" almacenado en ROOT/template/base.php, el metodo render
-     * acepta un argumento para especificar otro archivo de plantilla base que debe
-     * estar almacenado dentro de este directorio
+     * Default layout views, if you want render by default in another file
+     * change this value
      **/
     private $layout = "base";
 
     /**
-     * Esta propiedad esta definida para establecer el titulo de la pagina
-     * que este a su vez es pasado por el metodo render y se utiliza en el metodo render_layout
+     * A page title, you can pass this in render method
      **/
     private $pageTitle;
 
     /**
-     * fusionará todos los datos que queremos pasar a la vista.
-     * Cualquier datos que le pasemos este lo envia a la vista, preferiblemente pasar arreglos.
+     * This method send all the data to you views, arrays, strings, objects.
      *
-     * eje: $data['foo'] = 'bar';
+     * Example: $data['foo'] = 'bar';
      *
      * @param $data
      */
@@ -40,19 +37,12 @@ class Controller
     }
 
     /**
-     * importará los datos con el método extract y luego
-     * cargará el diseño solicitado en el directorio views. Además, esto nos
-     * permite tener un diseño para evitar la estúpida repetición de HTML en nuestras vistas.
+     * Load your view file and pass all data you pass in setData method
      *
-     * El parametro @external_view Se utiliza para indicarle al metodo
-     * @render si la vista que se esta cargando no esta dentro del ambito
-     * del controlador actual, es util para cargar componentes de otras vistas
-     * o otras vistas completas
-     *
-     * @param $filename
-     * @param null $title
-     * @param bool $external_view
-     * @param null $other_layout
+     * @param string $filename | You view file name, in general this have same name of the action or other name in view dir controller learn more https://ligne-framework.gitbook.io/ligne-framework-php/documentacion/controlador
+     * @param string $title | Title page you want display to user
+     * @param bool $external_view | Use for specific another view is you want not load the default controller view
+     * @param string $other_layout | If you want specific other layout to render your view
      */
     function render(string $filename,string $title = null,bool $external_view = false,string $other_layout = null):void
     {
@@ -77,12 +67,10 @@ class Controller
 
 
     /**
-     * Requiere el layout existente y dentro pasa el contenido
-     * que se envio al controlador
      * @param $content_for_layout
      */
     private function renderLayout(string $viewContent):void{
-        //Se crea esta propiedad aqui para que este diponible en el layout
+        //The pageTitle var create here for scope visibility
         $pageTitle = ($this->pageTitle != null)? $this->pageTitle : null ;
         if(file_exists(__ROOT__DIR__ . "template/" . $this->layout . '.php')){
             require(__ROOT__DIR__ . "template/" . $this->layout . '.php');
@@ -92,10 +80,10 @@ class Controller
     }
 
     /**
-     * Este metodo es utilizado para redirigir sea a un controlador
-     * o a una url fuera del proyecto, tambien admite un segundo parametro opcional
+     * Redirect user to internal route in project or external route
      *
      * array ( 'controller'  =>  'myController' ,  'action'  =>  'foo' , [2])
+     * Or internet route 'https://google.com'
      *
      * @param $redirecTo
      * @param null $param
@@ -105,14 +93,13 @@ class Controller
             $root_dir = $_SERVER['REQUEST_URI'];
             $root_dir = explode('/',$root_dir);
             $param_ = ($param == null )? '' : '/' . $param;
-            header('Location: '. PROTOCOL . '://' . $_SERVER['SERVER_NAME'] . '/' . $root_dir[1] . '/' . $redirecTo['controller'] . '/' . $redirecTo['action'] . $param_ );
+            header('Location: '. '/' . $root_dir[1] . '/' . $redirecTo['controller'] . '/' . $redirecTo['action'] . $param_ );
         }else
             header('Location: '.$redirecTo);
     }
 
     /**
-     * Este metodo es llamado si el archivo con el nombre de la vista
-     * no existe, muestra el usuario que la vista no existe
+     * Show error 500 HTTP status if the view you specific in your controller
      * @param $filename
      */
     private function viewNonexists(string $filename):void{
@@ -121,8 +108,7 @@ class Controller
             "La vista <span class='special_name_element'>' $filename '</span> no fue encontrada");
     }
     /**
-     * Este metodo es solo utilizado para mostrar al usuario
-     * que el layout que ha elegido no es valido en caso se no serlo
+     * Is the default layout no exits
     **/
     private function defaultLayoutNotFound():void {
         $errorHandler = new ErrorHandler(ENVIROMENT);

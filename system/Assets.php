@@ -9,12 +9,12 @@
 class Assets
 {
     /**
-     * Recibe un string con el elemento que se pretende agregar al proyecto
+     * Receives an string an set relative path of assets
      *      eje: 'css/main.css'
      *      eje: 'js/jquery.min.js'
-     * Este retorna una url absoluta
-     * Tiene parametro opcional para determinar si se permitida que el navegador
-     * almacene la cache de los assets
+     *
+     * This no verify if the asset exists, if no exists you get a 404 HTTP Status error
+     * in browser console.
      *
      * @param $asset
      * @param bool $cache
@@ -23,12 +23,23 @@ class Assets
     static public function setAssets(string $asset,bool $cache = true):string
     {
         $assets_dir = 'web/assets';
-        return '../' . $assets_dir . '/' . $asset . self::cache($cache);
+        return '/' . self::rootDir() . '/' . $assets_dir . '/' . $asset . self::cache($cache);
     }
 
     /**
-     * Se utiliza para retornar el tiempo a la url de los assets para
-     * evitar que el navegador almacene estos en cache
+     * @return string
+     *
+     * Return relative dir name
+     */
+    static private function rootDir():string {
+        $root_dir = $_SERVER['REQUEST_URI'];
+        $root_dir = explode('/',$root_dir);
+        return $root_dir[1];
+    }
+
+    /**
+     * Is a hack for keep in cache the assets, this put "?v1212" subfix
+     * in the asset name
      *
      * @param $bool
      * @return string
@@ -42,16 +53,15 @@ class Assets
     }
 
     /**
-     * Retorna una URL valida dentro del proyecto donde no es necesario
-     * especificar la carpeta root explicitamente
+     * Return a string url for user in anchors
      *
-     * eje: <a href=" <?= Assets::href("tasks/index")?> ">
+     * Example: <a href=" <?= Assets::href("tasks/index")?> ">
      *                                   ^      ^
-     *                             controlador  ^
-     *                                          accion
+     *                               controller ^
+     *                                        action
      *
-     * @param $url
-     * @param null | mixed $param
+     * @param $url [users/profile]
+     * @param $param | mixed [ '1' or array [1 , "services", 2] ]
      *
      * @return string
      */

@@ -24,12 +24,7 @@ class DefaultController extends Controller
         $data['date'] = "2019-11-23";
         $data['externalComponentsIncluded'] = ["Ligne/Error Handler","Izniburak/PDOX"];
         $data['autor'] = "Albert Eduardo Hidalgo Taveras";
-        $this->redirect(['controller'=>'default','action'=>'some']);
-//        $this->setData($data);
-//        $this->render("index",'Ligne 2');
-    }
-
-    public function some(){
-        echo 'some';
+        $this->setData($data);
+        $this->render("index",'Ligne 2');
     }
 }

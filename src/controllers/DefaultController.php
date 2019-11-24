@@ -6,25 +6,25 @@
  * Time: 3:34 PM
  */
 /**
- * Este es el controlador que el framework carga internamente si
- * se ingresa al dominio del sitio.
+ * this is a demo controller, you can modificate this, for example
+ * if user enter on root domain, redirect to home
 **/
 
 
 class DefaultController extends Controller
 {
     /**
-     * Esto es un metodo de ejemplo, puede ser cambiado a tu gusto
+     * https://myhost/app/default/index
      */
     public function index()
     {
         $data['framework_name'] = "Ligne Framework";
-        $data['version'] = "2.0.0 Dev";
+        $data['version'] = "2.1.13 Dev";
         $data['environment'] = "Dev";
-        $data['date'] = "* 2019";
-        $data['externalComponentsIncluded'] = ["Ligne/Error Handler","Symfony/HttpFoundation","Izniburak/PDOX"];
+        $data['date'] = "2019-11-23";
+        $data['externalComponentsIncluded'] = ["Ligne/Error Handler","Izniburak/PDOX"];
         $data['autor'] = "Albert Eduardo Hidalgo Taveras";
         $this->setData($data);
-        $this->render("index",'Ligne v2');
+        $this->render("index",'Ligne 2');
     }
 }

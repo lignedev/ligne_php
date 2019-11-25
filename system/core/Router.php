@@ -3,21 +3,22 @@
 use Ligne\ErrorHandler;
 
 /**
-  * This class controls even if a driver has been entered in the url
-  * nonexistent or a controller method that does not exist with the following hierarchy:
-  *
-  * http: // host / controller / action / [parameter]
-  * ^ ^
-  * 1st verify 2nd verify
-  *
-  * Until the first condition of this is not given, it does not continue, this being a way
-  * make sure the controller is correct to verify
-  * that the method be part of that controller.
-  *
-  * The router takes the url captured by request.php and exploits the url in 3
-  * different parts in the "/" character:
-  *
-  **/
+ * This class controls even if a driver has been entered in the url
+ * nonexistent or a controller method that does not exist with the following hierarchy:
+ *
+ * http: // host / controller / action / [parameter]
+ *                     ^          ^
+ *               1st verify    2nd verify
+ *
+ * Until the first condition of this is not given, it does not continue, this being a way
+ * make sure the controller is correct to verify
+ * that the method be part of that controller.
+ *
+ * The router takes the url captured by request.php and exploits the url in 3
+ * different parts in the "/" character:
+ *
+ **/
+
 class Router
 {
     /**
@@ -37,20 +38,20 @@ class Router
         if ($url == '/' . self::rootDir() . '/' || $controllerName === null)
             self::loadIndex($request);
         elseif ($controllerName !== null && $actionNAme !== null)
-            self::routeConstruct($request, $controllerName,$actionNAme,$params);
+            self::routeConstruct($request, $controllerName, $actionNAme, $params);
         else
             self::showNonexistentController($controllerName);
     }
 
     /**
      * Construct the route base on URL
-     * 
+     *
      * @param object $request
      * @param string $controllerName
      * @param string $actionName
      * @param array $params
      */
-    static private function routeConstruct(object $request, string $controllerName,string $actionName,array $params): void
+    static private function routeConstruct(object $request, string $controllerName, string $actionName, array $params): void
     {
         $request->controller = $controllerName;
         $request->action = $actionName;
@@ -144,7 +145,7 @@ class Router
         $explodeUrl = explode('/', $url);
         $explodeRootDir = explode('/', __ROOT__DIR__);
 
-        $explodeUrl = self::unsertKeysFromSourceArray($explodeUrl,$explodeRootDir);
+        $explodeUrl = self::unsertKeysFromSourceArray($explodeUrl, $explodeRootDir);
 
         $explodeUrl = array_values($explodeUrl);
         return isset($explodeUrl[0]) ? $explodeUrl[0] : null;
@@ -155,18 +156,18 @@ class Router
         $explodeUrl = explode('/', $url);
         $explodeRootDir = explode('/', __ROOT__DIR__);
 
-        $explodeUrl = self::unsertKeysFromSourceArray($explodeUrl,$explodeRootDir);
+        $explodeUrl = self::unsertKeysFromSourceArray($explodeUrl, $explodeRootDir);
 
         $explodeUrl = array_values($explodeUrl);
         return isset($explodeUrl[1]) ? $explodeUrl[1] : null;
     }
 
-    static public function subtractParams($url):array
+    static public function subtractParams($url): array
     {
         $explodeUrl = explode('/', $url);
         $explodeRootDir = explode('/', __ROOT__DIR__);
 
-        $params = self::unsertKeysFromSourceArray($explodeUrl,$explodeRootDir);
+        $params = self::unsertKeysFromSourceArray($explodeUrl, $explodeRootDir);
 
         $params = array_values($explodeUrl);
         //Exclude the controller and action from url
@@ -187,7 +188,8 @@ class Router
      * Unsert project "values" from the $url for determinate if the user specific the
      * controller, action and params
      */
-    static private function unsertKeysFromSourceArray(array $source, array $target){
+    static private function unsertKeysFromSourceArray(array $source, array $target)
+    {
         foreach ($source as $key => $value) {
             if (in_array($value, $target)) {
                 unset($source[$key]);

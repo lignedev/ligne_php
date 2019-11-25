@@ -3,21 +3,21 @@
 use Ligne\ErrorHandler;
 
 /**
- * Esta clase controla inclusive si en la url se ha ingresado un controlador
- * inexistente o un metodo del controlador que no existe con la siguiente jerarquía:
- *
- * http://host/controller/action/[parameter]
- *                  ^        ^
- *            1ro verifica   2da verifica
- *
- * Hasta que la primera condicion de este no se da, no continua, siendo esta una manera
- * se asegurarse de que el controlador este correcrto para poder verificar
- * que el metodo sea parte de ese controlador.
- *
- * El enrutador toma la url capturada por request.php y explota la url en 3
- * partes diferentes en el carácter "/":
- *
- **/
+  * This class controls even if a driver has been entered in the url
+  * nonexistent or a controller method that does not exist with the following hierarchy:
+  *
+  * http: // host / controller / action / [parameter]
+  * ^ ^
+  * 1st verify 2nd verify
+  *
+  * Until the first condition of this is not given, it does not continue, this being a way
+  * make sure the controller is correct to verify
+  * that the method be part of that controller.
+  *
+  * The router takes the url captured by request.php and exploits the url in 3
+  * different parts in the "/" character:
+  *
+  **/
 class Router
 {
     /**
@@ -43,8 +43,8 @@ class Router
     }
 
     /**
-     * Constuye la url si esta es valida, digase que exista el controlador
-     * y su accion
+     * Construct the route base on URL
+     * 
      * @param object $request
      * @param string $controllerName
      * @param string $actionName
@@ -72,8 +72,7 @@ class Router
     }
 
     /**
-     * Verifica que la $url sea un arreglo de 2 o mas posiciones para obtener
-     * una url valida
+     * Check if the url have an controller and action
      * eje: http://localhost/ligne_php/Controller/Action/[parameter]
      *                                  ^          ^
      *                                $url[0]     $url[1]
@@ -90,9 +89,7 @@ class Router
     }
 
     /**
-     * Retorna el nombre de la carpeta base del proyecto
-     * esto es relativo ya que la carpeta donde esta el framework podria
-     * llamarse de cualquier manera y con esto se obtiene este nombre
+     * Return main project dir for load controllers class files
      *
      * @return string
      */
@@ -114,7 +111,7 @@ class Router
     }
 
     /**
-     * Muestra al usuario que la accion requerida esta vacia, no existe o es incorrecta
+     * Show HTTP 500 Status code and error if the actions not valid
      */
     static public function showInvalidAction(): void
     {
@@ -125,7 +122,7 @@ class Router
     }
 
     /**
-     * Muestra al usuario que el metodo del controlador no existe
+     * Show HTTP 500 Status code and error if the actions not exists
      * @param $method String
      */
     static public function showActionNoExists(string $method): void
@@ -173,8 +170,8 @@ class Router
 
         $params = array_values($explodeUrl);
         //Exclude the controller and action from url
-        unset($params[0]);
-        unset($params[1]);
+        for ($i = 0; $i <= 3; $i++)
+            unset($params[$i]);
         $params = array_values($params);
         return (empty($params)) ? [] : $params;
     }

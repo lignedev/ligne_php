@@ -19,10 +19,10 @@ class DefaultController extends Controller
     public function index()
     {
         $data['framework_name'] = "Ligne Framework";
-        $data['version'] = "2.1.13 Dev";
+        $data['version'] = "2.5.1";
         $data['environment'] = "Dev";
-        $data['date'] = "2019-11-23";
-        $data['externalComponentsIncluded'] = ["Ligne/Error Handler","Izniburak/PDOX"];
+        $data['date'] = "2020-06-15";
+        $data['externalComponentsIncluded'] = ["Ligne/Error Handler","Izniburak/PDOX", "vlucas/phpdotenv"];
         $data['autor'] = "Albert Eduardo Hidalgo Taveras";
         $this->setData($data);
         $this->render("index",'Ligne 2');

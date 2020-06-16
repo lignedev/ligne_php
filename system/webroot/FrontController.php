@@ -48,5 +48,11 @@ use Ligne\ErrorHandler;
 
 new ErrorHandler(ENVIROMENT);
 
+//Env file load
+
+$dotenv = Dotenv\Dotenv::createImmutable(__ROOT__DIR__);
+$dotenv->load();
+
+//Load app
 $dispatch = new Dispatcher();
 $dispatch->dispatch();

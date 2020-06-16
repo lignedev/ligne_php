@@ -1,8 +1,7 @@
 <?php
 /**
- * Esta clase es el intermediario entre los modelos y
- * la clase Database, esto con el objetivo de mantener
- * una estructura solida y poco confusa
+ * Intermediate class and extendable for all database models.
+ * Using Pdox library.
  **/
 namespace System;
 
@@ -19,18 +18,18 @@ class Model
             /**
              * Load the database credentials of the config file
             */
-            $this->credentials = parse_ini_file( str_replace('\\','/',__DIR__) . "/config/config.php.ini");
+            $this->credentials = $_ENV;
 
             $this->config = [
-                'host'		=> $this->credentials["host"],
-                'driver'	=> $this->credentials["driver"],
-                'database'	=> $this->credentials["dbname"],
-                'username'	=> $this->credentials["user"],
-                'password'	=> $this->credentials["pass"],
-                'charset'	=> $this->credentials["charset"],
-                'collation'	=> $this->credentials["collation"],
-                'prefix'	=> $this->credentials["prefix"],
-                'port'	=> $this->credentials["port"],
+                'host'		=> $this->credentials["HOST"],
+                'driver'	=> $this->credentials["DRIVER"],
+                'database'	=> $this->credentials["DB_NAME"],
+                'username'	=> $this->credentials["USER"],
+                'password'	=> $this->credentials["PASSWORD"],
+                'charset'	=> $this->credentials["CHARSET"],
+                'collation'	=> $this->credentials["COLLATION"],
+                'prefix'	=> $this->credentials["PREFIX"],
+                'port'	=> $this->credentials["PORT"],
                 'debug' =>false
             ];
             /**

@@ -11,7 +11,8 @@
     ],
     "require": {
         "izniburak/pdox": "^1.3",
-        "ligne/error-handler": "^1.0"
+        "ligne/error-handler": "^1.0",
+        "vlucas/phpdotenv": "^5.0"
     },
     "autoload": {
         "psr-4": {

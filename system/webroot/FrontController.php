@@ -14,7 +14,7 @@ if(version_compare(PHP_VERSION, '7.2', '>=') == false ){
     echo '<title>Versión | Error</title>';
     echo '<div style="margin: auto;text-align: center;font-family: sans-serif;margin-top: 70px;">';
     echo '<h1>Versión no compatible</h1>';
-    echo '<h3>La versión de PHP que está utilizando no es compatible con LIGNE, favor utilizar una versión igual o superior a 7.1.3</h3>';
+    echo '<h3>Invalid PHP version, please update up to 7.1.3</h3>';
     echo '</div>';
     die();
 }
@@ -29,7 +29,7 @@ define('PROTOCOL','http');
  *
  * Examples;
  *
- * The framework use this constant for check if an error ocurred, show another
+ * The framework use this constant for check if an error occurred, show another
  * view and HTTP status code error
  **/
 define('ENVIROMENT','dev');
@@ -48,10 +48,11 @@ use Ligne\ErrorHandler;
 
 new ErrorHandler(ENVIROMENT);
 
-//Env file load
-
-$dotenv = Dotenv\Dotenv::createImmutable(__ROOT__DIR__);
-$dotenv->load();
+//Env file load if exists
+if(file_exists(__ROOT__DIR__.'.env')){
+    $dotenv = Dotenv\Dotenv::createImmutable(__ROOT__DIR__);
+    $dotenv->load();
+}
 
 //Load app
 $dispatch = new Dispatcher();

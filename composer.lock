@@ -106,16 +106,16 @@
         },
         {
             "name": "ligne/error-handler",
-            "version": "1.0.5",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lignedev/error-handler.git",
-                "reference": "8285cc42186a4f9afb53a0da32f2864852c63443"
+                "reference": "703354a1bb72687028fee04526b73a172c193618"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lignedev/error-handler/zipball/8285cc42186a4f9afb53a0da32f2864852c63443",
-                "reference": "8285cc42186a4f9afb53a0da32f2864852c63443",
+                "url": "https://api.github.com/repos/lignedev/error-handler/zipball/703354a1bb72687028fee04526b73a172c193618",
+                "reference": "703354a1bb72687028fee04526b73a172c193618",
                 "shasum": ""
             },
             "require": {
@@ -134,8 +134,8 @@
             "authors": [
                 {
                     "name": "Albert Eduardo Hidalgo Taveras",
-                    "role": "Developer",
-                    "email": "itsalb3rt@gmail.com"
+                    "email": "itsalb3rt@gmail.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Error Handler for Ligne PHP",
@@ -144,7 +144,7 @@
                 "error handler",
                 "ligne php"
             ],
-            "time": "2019-07-28T00:41:19+00:00"
+            "time": "2020-06-06T15:04:16+00:00"
         },
         {
             "name": "phpoption/phpoption",

@@ -23,18 +23,23 @@ class Assets
     static public function setAssets(string $asset,bool $cache = true):string
     {
         $assets_dir = 'web/assets';
-        return '/' . self::rootDir() . '/' . $assets_dir . '/' . $asset . self::cache($cache);
+        return self::rootDir() . '/' . $assets_dir . '/' . $asset . self::cache($cache);
     }
 
     /**
      * @return string
      *
-     * Return relative dir name
+     * Return relative dir name without controller and action name
      */
     static private function rootDir():string {
         $root_dir = $_SERVER['REQUEST_URI'];
         $root_dir = explode('/',$root_dir);
-        return $root_dir[1];
+
+        array_shift($root_dir); //Removed blank string
+        array_pop($root_dir); //Remove controller name
+        array_pop($root_dir);// Remove action name
+
+        return (empty($root_dir)) ? "": "/" . implode("/",$root_dir);
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 /**
- * El objetivo de este archivo es obtener la URL solicitada por el usuario.
+ * This only send the request API to router
  */
 
 class Request

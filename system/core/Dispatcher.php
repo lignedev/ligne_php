@@ -1,9 +1,9 @@
 <?php
 /**
- * El despachador está haciendo el mismo trabajo que un controlador de tránsito aéreo.
- * Cuando se carga una nueva solicitud, selecciona el controlador y la
- * acción con parámetros. Entonces, con un solo método (dispatch ()),podemos
- * iniciar toda esta lógica de enrutamiento.
+ * The dispatcher is doing the same job as an air traffic controller.
+ * When a new request is loaded, select the driver and the
+ * action with parameters. So with a single method (dispatch ()), we can
+ * start all this routing logic.
  *
  *  http://host/controller/action/[parameter]
  *
@@ -35,7 +35,7 @@ class Dispatcher
     }
 
     /**
-     * Carga un controlador segun la URL solicitada
+     * Loads a driver based on the requested URL
      * @return mixed
      */
     public function getController(string $name, string $file):object
@@ -53,10 +53,10 @@ class Dispatcher
     }
 
     /**
-     * Se utiliza para saber si la variable que contiene la accion
-     * Esta vacia, de estar vacia no se ha ingresado una accion valida
-     * o metodo del controlador
-     * @param $action [Metodo del controlador]
+     * It is used to know if the variable that contains the action
+     * This empty, if empty, no valid action has been entered
+     * or controller method
+     * @param $ action [Controller method]
      *
      * @return bool
      */

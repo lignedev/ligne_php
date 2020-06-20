@@ -1,8 +1,8 @@
 <?php
 /**
- * Todos los controladores creados deben heredar
- * de este controlador para el funcionamiento de los mismos ya que
- * contiene el asignamiento de los datos y el renderizado de la pantilla y vistas
+ * All created drivers must inherit
+ * of this controller for the operation of the same since
+ * contains the data mapping and rendering of the caliper and views
  **/
 use Ligne\ErrorHandler;
 
@@ -104,16 +104,16 @@ class Controller
      */
     private function viewNonexists(string $filename):void{
         $errorHandler = new ErrorHandler(ENVIROMENT);
-        $errorHandler->showDevMessages("Error archivo vista",
-            "La vista <span class='special_name_element'>' $filename '</span> no fue encontrada");
+        $errorHandler->showDevMessages("View not found",
+            "<span class='special_name_element'>' $filename '</span> view not found");
     }
     /**
      * Is the default layout no exits
     **/
     private function defaultLayoutNotFound():void {
         $errorHandler = new ErrorHandler(ENVIROMENT);
-        $errorHandler->showDevMessages("Problema al cargar el default Layout",
-            "No se ha podido cargar el layout por defecto, probablemente no este con el nombre que se ha configurado o no exista.",
+        $errorHandler->showDevMessages("Problem loading the default layout",
+            "The default layout could not be loaded, probably it is not with the name that has been configured or does not exist.",
             __ROOT__DIR__ . "views/template/" . $this->layout . '.php');
     }
 
